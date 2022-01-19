@@ -1,0 +1,15 @@
+{
+    "name": "example",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve:block": "frontify-cli block serve --blockDir $(PWD)"
+    },
+    "dependencies": {
+        "@typeform/embed-react": "^1.1.3"
+    },
+    "devDependencies": {
+        "@frontify/guideline-blocks-settings": "^0.0.1-alpha.0"
+    }
+}
