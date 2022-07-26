@@ -12,8 +12,7 @@
         "target": "es6",
         "jsx": "react-jsx",
         "lib": ["ES2021", "DOM"],
-        "resolveJsonModule": true,
-        "skipLibCheck": true
+        "resolveJsonModule": true
     },
     "exclude": ["dist", "node_modules"]
 }

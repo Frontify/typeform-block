@@ -14,10 +14,10 @@
 	},
 	"devDependencies": {
 		"@frontify/eslint-config-react": "0.15.2",
-		"@frontify/frontify-cli": "^5.0.1",
+		"@frontify/frontify-cli": "5.0.1",
 		"@frontify/guideline-blocks-settings": "0.15.1",
-		"@types/react": "17.0.43",
-		"autoprefixer": "10.4.7",
+		"@types/react": "17.0.47",
+		"autoprefixer": "10.4.4",
 		"eslint": "8.16.0",
 		"postcss": "8.4.14",
 		"postcss-modules": "4.3.1",

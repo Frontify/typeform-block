@@ -4,7 +4,7 @@ import { BlockSettings, Bundle } from '@frontify/guideline-blocks-settings';
 
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Small;
 
-const settings: BlockSettings = {
+export const settings: BlockSettings = {
     main: [
         {
             id: 'embed-style',
@@ -137,5 +137,3 @@ const settings: BlockSettings = {
         },
     ],
 };
-
-export default settings;

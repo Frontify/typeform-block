@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
 import { AppBridgeNative, useBlockSettings, useEditorState } from '@frontify/app-bridge';
+import { settings } from './settings';
 import styles from './style.module.css';
 import { FC } from 'react';
 
@@ -88,4 +89,7 @@ const TypeformBlock: FC<Props> = ({ appBridge }) => {
     return <div className={styles.container}>{renderEmbed()}</div>;
 };
 
-export default TypeformBlock;
+export default {
+    block: TypeformBlock,
+    settings,
+};
