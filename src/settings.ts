@@ -1,8 +1,15 @@
+/* (c) Copyright Frontify Ltd., all rights reserved. */
+
 import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockHeight } from './types';
 import { BlockSettings, Bundle } from '@frontify/guideline-blocks-settings';
 
-export const HEIGHT_DEFAULT_VALUE = BlockHeight.Small;
+export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
+export const MIN_HEIGHT_VALUE = 200;
+export const ERROR_MSG = 'Please enter a valid Typeform form id';
+export const FORM_ID_PLACEHOLDER = 'GKcYunMz';
+export const FORM_ID_INFO =
+    'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>';
 
 export const settings: BlockSettings = {
     main: [
@@ -10,33 +17,33 @@ export const settings: BlockSettings = {
             id: 'embed-style',
             type: 'dropdown',
             label: 'Embed Type',
-            defaultValue: 'standard',
+            defaultValue: 'embed',
             size: DropdownSize.Large,
             choices: [
                 {
-                    value: 'standard',
-                    icon: IconEnum.FigureTextBottom,
-                    label: 'Standard',
+                    value: 'embed',
+                    icon: IconEnum.MarkArea,
+                    label: 'Embed',
                 },
                 {
-                    value: 'popupButton',
-                    icon: IconEnum.Button,
-                    label: 'Popup Button',
+                    value: 'popup',
+                    icon: IconEnum.TextBoxStack,
+                    label: 'Popup',
                 },
                 {
-                    value: 'sliderButton',
-                    icon: IconEnum.Button,
-                    label: 'Slider Button',
+                    value: 'sidePanel',
+                    icon: IconEnum.SidebarRight,
+                    label: 'Side Panel',
                 },
             ],
         },
     ],
-    content: [
+    basics: [
         {
             id: 'form-id',
             type: 'input',
             label: 'Typeform Form ID',
-            info: 'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>',
+            info: FORM_ID_INFO,
         },
         {
             id: 'buttonText',
@@ -45,22 +52,48 @@ export const settings: BlockSettings = {
             placeholder: 'Open Form',
             defaultValue: 'Open Form',
             show: (bundle: Bundle): boolean =>
-                bundle.getBlock('embed-style')?.value === 'popupButton' ||
-                bundle.getBlock('embed-style')?.value === 'sliderButton',
+                bundle.getBlock('embed-style')?.value === 'popup' ||
+                bundle.getBlock('embed-style')?.value === 'sidePanel',
         },
     ],
     layout: [
         {
-            id: 'hideHeaders',
-            type: 'switch',
-            label: 'Hide Headers',
-            defaultValue: false,
+            id: 'general',
+            type: 'sectionHeading',
+            label: 'General',
+            blocks: [
+                {
+                    id: 'header',
+                    type: 'switch',
+                    label: 'Header',
+                    info: 'Controls the header that appears when you have a question group, or a long question',
+                    defaultValue: true,
+                },
+                {
+                    id: 'footer',
+                    type: 'switch',
+                    label: 'Footer',
+                    info: 'Controls the visiblity of the form progress bar and navigation buttons',
+                    defaultValue: true,
+                },
+            ],
         },
         {
-            id: 'hideFooter',
-            type: 'switch',
-            label: 'Hide Footer',
-            defaultValue: false,
+            id: 'position',
+            type: 'slider',
+            label: 'Slider position',
+            defaultValue: 'right',
+            choices: [
+                {
+                    value: 'left',
+                    label: 'Left',
+                },
+                {
+                    value: 'right',
+                    label: 'Right',
+                },
+            ],
+            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'sidePanel',
         },
         {
             id: 'isHeightCustom',
@@ -68,8 +101,8 @@ export const settings: BlockSettings = {
             label: 'Block Height',
             switchLabel: 'Custom',
             defaultValue: false,
-            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'standard',
-            info: 'Determines the block height.',
+            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'embed',
+            info: 'Determines the block height',
             on: [
                 {
                     id: 'heightCustom',
@@ -116,24 +149,10 @@ export const settings: BlockSettings = {
     style: [
         {
             id: 'opacity',
-            label: 'Background Transparency',
-            info: '0% (fully transparent) to 100% (fully opaque)',
-            type: 'input',
-            placeholder: '0%',
-            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'standard',
-            rules: [
-                {
-                    errorMessage: "Please use a numerical value with or without '%'",
-                    validate: (value: string) => value.match(/^-?\d+%?$/g) !== null,
-                },
-            ],
-            onChange: (bundle: Bundle): void => {
-                const blockOpacity = Number(bundle.getBlock('opacity')?.value);
-
-                if (!Number.isNaN(blockOpacity)) {
-                    bundle.setBlockValue('heightCustom', `${blockOpacity}%`);
-                }
-            },
+            label: 'Transparent Background',
+            info: 'Enable or disable the background of the form',
+            type: 'switch',
+            defaultValue: false,
         },
     ],
 };
