@@ -1,16 +1,10 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import { AppBridgeBlock } from '@frontify/app-bridge';
-
 export enum BlockHeight {
     Small = '200px',
     Medium = '400px',
     Large = '800px',
 }
-
-export type Props = {
-    appBridge: AppBridgeBlock;
-};
 
 export type Settings = {
     'embed-style': 'embed' | 'popup' | 'sidePanel';

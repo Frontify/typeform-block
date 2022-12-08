@@ -3,14 +3,15 @@
 import 'tailwindcss/tailwind.css';
 import { FC, useCallback, useEffect, useState } from 'react';
 import { useBlockSettings, useEditorState, useReadyForPrint } from '@frontify/app-bridge';
+import type { BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
 import { Button, FormControl, FormControlStyle, TextInput } from '@frontify/fondue';
 import { isValidTypeformId } from './utils/isValidTypformId';
 import { ERROR_MSG, FORM_ID_INFO, FORM_ID_PLACEHOLDER } from './settings';
 import { Resizeable } from './components/Resizable';
-import { BlockHeight, Options, Props, Settings } from './types';
+import { BlockHeight, Options, Settings } from './types';
 
-export const TypeformBlock: FC<Props> = ({ appBridge }) => {
+export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
     const {

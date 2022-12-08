@@ -1,8 +1,7 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import { DropdownSize, IconEnum } from '@frontify/fondue';
 import { BlockHeight } from './types';
-import { BlockSettings, Bundle } from '@frontify/guideline-blocks-settings';
+import { Bundle, DropdownSize, IconEnum, defineSettings } from '@frontify/guideline-blocks-settings';
 
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
 export const MIN_HEIGHT_VALUE = 200;
@@ -11,7 +10,7 @@ export const FORM_ID_PLACEHOLDER = 'GKcYunMz';
 export const FORM_ID_INFO =
     'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>';
 
-export const settings: BlockSettings = {
+export const settings = defineSettings({
     main: [
         {
             id: 'embed-style',
@@ -155,4 +154,4 @@ export const settings: BlockSettings = {
             defaultValue: false,
         },
     ],
-};
+});
