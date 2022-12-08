@@ -7,22 +7,14 @@ import type { BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
 import { Button, FormControl, FormControlStyle, TextInput } from '@frontify/fondue';
 import { isValidTypeformId } from './utils/isValidTypformId';
-import { ERROR_MSG, FORM_ID_INFO, FORM_ID_PLACEHOLDER } from './settings';
+import { ERROR_MSG, FORM_ID_INFO } from './settings';
 import { Resizeable } from './components/Resizable';
 import { BlockHeight, Options, Settings } from './types';
 
 export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
-    const {
-        'form-id': settingsFormId,
-        opacity,
-        header,
-        footer,
-        position,
-        'embed-style': embedStyle,
-        buttonText,
-    } = blockSettings;
+    const { formId: settingsFormId, opacity, header, footer, position, embedStyle, buttonText } = blockSettings;
     const options: Options = {
         id: settingsFormId,
         opacity: opacity ? 0 : 100,
@@ -31,8 +23,8 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         enableSandbox: isEditing,
         position,
     };
-    const [formId, setFormId] = useState(blockSettings['form-id']);
-    const [input, setInput] = useState(blockSettings['form-id']);
+    const [formId, setFormId] = useState(blockSettings.formId);
+    const [input, setInput] = useState(blockSettings.formId);
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
 
@@ -43,7 +35,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         if (isValidTypeformId(input)) {
             setBlockSettings({
                 ...blockSettings,
-                ['form-id']: input,
+                formId: input,
             });
         }
     }, [blockSettings, input, setBlockSettings, setIsReadyForPrint]);
@@ -65,33 +57,38 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         });
     };
 
-    const labelId = `id-${window.crypto.getRandomValues(new Uint32Array(1))}`;
-
     if (!settingsFormId) {
         return (
             <>
                 {isEditing ? (
-                    <div
-                        className={`tw-grid tw-gap-4 tw-content-center tw-bg-black-5 tw-p-20 tw-text-black-40 tw-resize-y tw-h-[${BlockHeight.Small}]`}
-                    >
-                        <FormControl
-                            clickable
-                            helper={!isValidTypeformId(formId) ? { text: ERROR_MSG } : { text: FORM_ID_INFO }}
-                            style={!isValidTypeformId(formId) ? FormControlStyle.Danger : FormControlStyle.Primary}
-                            label={{
-                                children: 'Typeform form id',
-                                htmlFor: labelId,
-                            }}
-                        >
-                            <TextInput
-                                value={input}
-                                onChange={setInput}
-                                onEnterPressed={saveInputId}
-                                placeholder={FORM_ID_PLACEHOLDER}
-                            />
-                        </FormControl>
-                        <div>
-                            <Button onClick={saveInputId}>Confirm</Button>
+                    <div className={'tw-bg-black-5 tw-p-20 tw-text-black-40'}>
+                        <div className="tw-max-w-lg tw-mx-auto">
+                            <div className="sm:tw-flex sm:tw-items-center">
+                                <div className="tw-w-full">
+                                    <FormControl
+                                        clickable
+                                        helper={!isValidTypeformId(formId) ? { text: ERROR_MSG } : { text: '' }}
+                                        style={
+                                            !isValidTypeformId(formId)
+                                                ? FormControlStyle.Danger
+                                                : FormControlStyle.Primary
+                                        }
+                                    >
+                                        <TextInput
+                                            value={input}
+                                            onChange={setInput}
+                                            onEnterPressed={saveInputId}
+                                            placeholder="Typeform form id"
+                                        />
+                                    </FormControl>
+                                </div>
+                                <div className="tw-mt-3 sm:tw-mt-0 sm:tw-ml-3">
+                                    <Button onClick={saveInputId}>Confirm</Button>
+                                </div>
+                            </div>
+                            <div className="tw-text-sm tw-mt-3">
+                                <p>{FORM_ID_INFO}</p>
+                            </div>
                         </div>
                     </div>
                 ) : (

@@ -19,7 +19,7 @@ export const FORM_ID_INFO =
 export const settings = defineSettings({
     main: [
         {
-            id: 'embed-style',
+            id: 'embedStyle',
             type: 'dropdown',
             label: 'Embed Type',
             defaultValue: 'embed',
@@ -45,7 +45,7 @@ export const settings = defineSettings({
     ],
     basics: [
         {
-            id: 'form-id',
+            id: 'formId',
             type: 'input',
             label: 'Typeform Form ID',
             info: FORM_ID_INFO,
@@ -57,8 +57,8 @@ export const settings = defineSettings({
             placeholder: 'Open Form',
             defaultValue: 'Open Form',
             show: (bundle) =>
-                bundle.getBlock('embed-style')?.value === 'popup' ||
-                bundle.getBlock('embed-style')?.value === 'sidePanel',
+                bundle.getBlock('embedStyle')?.value === 'popup' ||
+                bundle.getBlock('embedStyle')?.value === 'sidePanel',
         },
     ],
     layout: [
@@ -98,7 +98,7 @@ export const settings = defineSettings({
                     label: 'Right',
                 },
             ],
-            show: (bundle) => bundle.getBlock('embed-style')?.value === 'sidePanel',
+            show: (bundle) => bundle.getBlock('embedStyle')?.value === 'sidePanel',
         },
         {
             id: 'isHeightCustom',
@@ -106,7 +106,7 @@ export const settings = defineSettings({
             label: 'Block Height',
             switchLabel: 'Custom',
             defaultValue: false,
-            show: (bundle) => bundle.getBlock('embed-style')?.value === 'embed',
+            show: (bundle) => bundle.getBlock('embedStyle')?.value === 'embed',
             info: 'Determines the block height',
             on: [
                 {

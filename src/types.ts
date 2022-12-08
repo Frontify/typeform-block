@@ -7,8 +7,8 @@ export enum BlockHeight {
 }
 
 export type Settings = {
-    'embed-style': 'embed' | 'popup' | 'sidePanel';
-    'form-id': string;
+    embedStyle: 'embed' | 'popup' | 'sidePanel';
+    formId: string;
     isHeightCustom: boolean;
     heightCustom: string;
     heightSimple: BlockHeight;
