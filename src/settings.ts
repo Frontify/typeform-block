@@ -1,7 +1,13 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
 import { BlockHeight } from './types';
-import { Bundle, DropdownSize, IconEnum, defineSettings } from '@frontify/guideline-blocks-settings';
+import {
+    DropdownSize,
+    IconEnum,
+    appendUnit,
+    defineSettings,
+    numericalOrPixelRule,
+} from '@frontify/guideline-blocks-settings';
 
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
 export const MIN_HEIGHT_VALUE = 200;
@@ -50,7 +56,7 @@ export const settings = defineSettings({
             type: 'input',
             placeholder: 'Open Form',
             defaultValue: 'Open Form',
-            show: (bundle: Bundle): boolean =>
+            show: (bundle) =>
                 bundle.getBlock('embed-style')?.value === 'popup' ||
                 bundle.getBlock('embed-style')?.value === 'sidePanel',
         },
@@ -92,7 +98,7 @@ export const settings = defineSettings({
                     label: 'Right',
                 },
             ],
-            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'sidePanel',
+            show: (bundle) => bundle.getBlock('embed-style')?.value === 'sidePanel',
         },
         {
             id: 'isHeightCustom',
@@ -100,26 +106,15 @@ export const settings = defineSettings({
             label: 'Block Height',
             switchLabel: 'Custom',
             defaultValue: false,
-            show: (bundle: Bundle): boolean => bundle.getBlock('embed-style')?.value === 'embed',
+            show: (bundle) => bundle.getBlock('embed-style')?.value === 'embed',
             info: 'Determines the block height',
             on: [
                 {
                     id: 'heightCustom',
                     type: 'input',
                     placeholder: '100px',
-                    rules: [
-                        {
-                            errorMessage: "Please use a numerical value with or without 'px'",
-                            validate: (value: string) => value.match(/^-?\d+(?:px)?$/g) !== null,
-                        },
-                    ],
-                    onChange: (bundle: Bundle): void => {
-                        const blockHeight = Number(bundle.getBlock('heightCustom')?.value);
-
-                        if (!Number.isNaN(blockHeight)) {
-                            bundle.setBlockValue('heightCustom', `${blockHeight}px`);
-                        }
-                    },
+                    rules: [numericalOrPixelRule],
+                    onChange: (bundle) => appendUnit(bundle, 'heightCustom'),
                 },
             ],
             off: [
