@@ -1,3 +1,5 @@
+> This tutorial is out of date at the moment. Please use with caution!
+
 # Building a Typeform Content Block
 
 With Frontify's Brand SDK for Content Blocks, you can create your own blocks for our Brand Guidelines.

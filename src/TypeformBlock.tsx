@@ -10,11 +10,23 @@ import { isValidTypeformId } from './utils/isValidTypformId';
 import { ERROR_MSG, FORM_ID_INFO } from './settings';
 import { Resizeable } from './components/Resizable';
 import { BlockHeight, Options, Settings } from './types';
+import { Button as TypeformButton } from './components/Button';
 
 export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
-    const { formId: settingsFormId, opacity, header, footer, position, embedStyle, buttonText } = blockSettings;
+    const {
+        formId: settingsFormId,
+        opacity,
+        header,
+        footer,
+        position,
+        embedStyle,
+        buttonText,
+        buttonBackgroundColor,
+        buttonBorderColor,
+        buttonTextColor,
+    } = blockSettings;
     const options: Options = {
         id: settingsFormId,
         opacity: opacity ? 0 : 100,
@@ -124,7 +136,11 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                 delete options.position;
 
                 return (
-                    <Button>
+                    <TypeformButton
+                        buttonBackgroundColor={buttonBackgroundColor}
+                        buttonBorderColor={buttonBorderColor}
+                        buttonTextColor={buttonTextColor}
+                    >
                         <PopupButton
                             {...options}
                             as="div"
@@ -132,7 +148,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                         >
                             {buttonText}
                         </PopupButton>
-                    </Button>
+                    </TypeformButton>
                 );
 
             case 'sidePanel':

@@ -2,8 +2,10 @@
 
 import { BlockHeight } from './types';
 import {
+    Color,
     DropdownSize,
     IconEnum,
+    MultiInputLayout,
     appendUnit,
     defineSettings,
     numericalOrPixelRule,
@@ -15,6 +17,9 @@ export const ERROR_MSG = 'Please enter a valid Typeform form id';
 export const FORM_ID_PLACEHOLDER = 'GKcYunMz';
 export const FORM_ID_INFO =
     'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>';
+const BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
+const BUTTON_BORDER_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
+const BUTTON_TEXT_COLOR_DEFAULT_VALUE: Color = { red: 255, green: 255, blue: 255, alpha: 1 };
 
 export const settings = defineSettings({
     main: [
@@ -147,6 +152,36 @@ export const settings = defineSettings({
             info: 'Enable or disable the background of the form',
             type: 'switch',
             defaultValue: false,
+        },
+        {
+            id: 'buttonStyle',
+            type: 'multiInput',
+            label: 'Button',
+            show: (bundle) =>
+                bundle.getBlock('embedStyle')?.value === 'popup' ||
+                bundle.getBlock('embedStyle')?.value === 'sidePanel',
+            layout: MultiInputLayout.Columns,
+            lastItemFullWidth: false,
+            blocks: [
+                {
+                    id: 'buttonBackgroundColor',
+                    type: 'colorInput',
+                    label: 'Background Color',
+                    defaultValue: BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE,
+                },
+                {
+                    id: 'buttonBorderColor',
+                    type: 'colorInput',
+                    label: 'Border Color',
+                    defaultValue: BUTTON_BORDER_COLOR_DEFAULT_VALUE,
+                },
+                {
+                    id: 'buttonTextColor',
+                    type: 'colorInput',
+                    label: 'Text Color',
+                    defaultValue: BUTTON_TEXT_COLOR_DEFAULT_VALUE,
+                },
+            ],
         },
     ],
 });

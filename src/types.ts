@@ -1,5 +1,7 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
+import { Color } from '@frontify/guideline-blocks-settings';
+
 export enum BlockHeight {
     Small = '200px',
     Medium = '400px',
@@ -17,6 +19,9 @@ export type Settings = {
     footer: boolean;
     opacity?: number;
     position: 'left' | 'right';
+    buttonBackgroundColor: Color;
+    buttonBorderColor: Color;
+    buttonTextColor: Color;
 };
 
 export type Options = {
