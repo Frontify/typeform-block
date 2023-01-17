@@ -35,7 +35,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         enableSandbox: isEditing,
         position,
     };
-    const [formId, setFormId] = useState(blockSettings.formId);
+    const [formId, setFormId] = useState(blockSettings.formId || '');
     const [input, setInput] = useState(blockSettings.formId);
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
@@ -73,7 +73,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         return (
             <>
                 {isEditing ? (
-                    <div className={'tw-bg-black-5 tw-p-20 tw-text-black-40'}>
+                    <div className="tw-bg-black-5 tw-p-20 tw-text-black-40">
                         <div className="tw-max-w-lg tw-mx-auto">
                             <div className="sm:tw-flex sm:tw-items-center">
                                 <div className="tw-w-full">
