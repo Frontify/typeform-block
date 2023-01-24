@@ -50,9 +50,10 @@ export const settings = defineSettings({
     ],
     basics: [
         {
-            id: 'formId',
+            id: 'formsId',
             type: 'input',
             label: 'Typeform Form ID',
+            defaultValue: '',
             info: FORM_ID_INFO,
         },
         {

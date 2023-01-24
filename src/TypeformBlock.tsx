@@ -35,7 +35,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         enableSandbox: isEditing,
         position,
     };
-    const [formId, setFormId] = useState(blockSettings.formId || '');
+    const [formId, setFormId] = useState(blockSettings.formId);
     const [input, setInput] = useState(blockSettings.formId);
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
