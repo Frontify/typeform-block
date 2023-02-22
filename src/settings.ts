@@ -152,6 +152,7 @@ export const settings = defineSettings({
             label: 'Transparent Background',
             info: 'Enable or disable the background of the form',
             type: 'switch',
+            show: (bundle) => bundle.getBlock('embedStyle')?.value === 'embed',
             defaultValue: false,
         },
         {
