@@ -20,11 +20,11 @@
 4. Go to your Frontify guideline
 5. Switch to edit mode
 
-![Toggle Edit Mode](/docs/styleguide-edit-mode.png)
+![Toggle Edit Mode](https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoid2VhcmVcL2ZpbGVcL2F0RmdTMzNOYmVZRGFvRHltSjR6LnBuZyJ9:weare:Mzc85Ec-OTVnmRHaWMHIYQGu15R59p-3D8986dmpbss?width=830)
 
 6. Click on the plus icon and add a "Local Block Development" block
 
-![Local Block Development block](/docs/local-block-development.png)
+![Local Block Development block](https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoid2VhcmVcL2ZpbGVcL3RqZmNnaVVTdGdRaTN5aXN6RG15LnBuZyJ9:weare:QdT7kv4ZKNvqkP7ojC3QZ9Pyocy6UHGGl4LhJY11PlQ?width=830)
 
 7. Choose port (default is 5600) and click OK
 
