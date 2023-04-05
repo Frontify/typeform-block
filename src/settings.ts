@@ -13,8 +13,6 @@ import {
 
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
 export const MIN_HEIGHT_VALUE = 200;
-export const ERROR_MSG = 'Please enter a valid Typeform form id';
-export const FORM_ID_PLACEHOLDER = 'GKcYunMz';
 export const FORM_ID_INFO =
     'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>';
 const BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
@@ -84,7 +82,7 @@ export const settings = defineSettings({
                     id: 'footer',
                     type: 'switch',
                     label: 'Footer',
-                    info: 'Controls the visiblity of the form progress bar and navigation buttons',
+                    info: 'Controls the visibility of the form progress bar and navigation buttons',
                     defaultValue: true,
                 },
             ],

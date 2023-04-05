@@ -115,6 +115,8 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                 }
 
             case 'popup':
+                delete options.opacity;
+
                 return (
                     <TypeformButton
                         buttonBackgroundColor={buttonBackgroundColor}
@@ -132,6 +134,8 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                 );
 
             case 'sidePanel':
+                delete options.opacity;
+
                 return (
                     <TypeformButton
                         buttonBackgroundColor={buttonBackgroundColor}
