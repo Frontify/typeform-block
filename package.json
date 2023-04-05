@@ -6,23 +6,23 @@
         "serve": "frontify-cli block serve --entryPath src/index.ts"
     },
     "dependencies": {
-        "@frontify/app-bridge": "3.0.0-beta.58",
-        "@frontify/fondue": "v12.0.0-beta.160",
-        "@frontify/guideline-blocks-settings": "0.25.12",
+        "@frontify/app-bridge": "3.0.0-beta.61",
+        "@frontify/fondue": "v12.0.0-beta.167",
+        "@frontify/guideline-blocks-settings": "0.26.2",
         "@typeform/embed-react": "2.19.0",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
         "@frontify/eslint-config-react": "0.15.7",
-        "@frontify/frontify-cli": "5.3.9",
+        "@frontify/frontify-cli": "5.3.10",
         "@types/react": "17.0.47",
         "autoprefixer": "10.4.14",
-        "eslint": "8.36.0",
+        "eslint": "8.37.0",
         "postcss": "8.4.21",
         "postcss-modules": "6.0.0",
         "prettier": "2.8.7",
-        "tailwindcss": "3.2.7",
-        "typescript": "5.0.2"
+        "tailwindcss": "3.3.1",
+        "typescript": "5.0.3"
     }
 }
