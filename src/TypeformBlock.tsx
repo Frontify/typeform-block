@@ -125,7 +125,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                     >
                         <PopupButton
                             {...options}
-                            as="div"
+                            as="button"
                             className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
                         >
                             {buttonText}
@@ -144,7 +144,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                     >
                         <SliderButton
                             {...options}
-                            as="div"
+                            as="button"
                             className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
                         >
                             {buttonText}
@@ -157,5 +157,5 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         }
     };
 
-    return <div className="tw-overflow-hidden">{renderEmbed()}</div>;
+    return <div>{renderEmbed()}</div>;
 };
