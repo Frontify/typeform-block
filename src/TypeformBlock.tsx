@@ -92,7 +92,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         } else {
             return (
                 <div
-                    className="tw-grid tw-gap-4 tw-content-center tw-justify-center tw-bg-black-5"
+                    className="tw-grid tw-gap-4 tw-content-center tw-justify-center tw-bg-black-5 tw-text-black-40"
                     style={{ height: BlockHeight.Small }}
                 >
                     No Typeform form id defined.
