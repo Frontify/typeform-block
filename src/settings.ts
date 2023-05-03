@@ -40,7 +40,7 @@ export const settings = defineSettings({
                 {
                     value: 'sidePanel',
                     icon: IconEnum.SidebarRight,
-                    label: 'Side Panel',
+                    label: 'Side panel',
                 },
             ],
         },
@@ -49,17 +49,17 @@ export const settings = defineSettings({
         {
             id: 'formId',
             type: 'input',
-            label: 'Typeform Form ID',
+            label: 'Typeform form id',
             defaultValue: '',
             placeholder: FORM_ID_INFO,
             info: FORM_ID_INFO,
         },
         {
             id: 'buttonText',
-            label: 'Button Label',
+            label: 'Button label',
             type: 'input',
-            placeholder: 'Open Form',
-            defaultValue: 'Open Form',
+            placeholder: 'Open form',
+            defaultValue: 'Open form',
             show: (bundle) =>
                 bundle.getBlock('embedStyle')?.value === 'popup' ||
                 bundle.getBlock('embedStyle')?.value === 'sidePanel',
@@ -107,7 +107,7 @@ export const settings = defineSettings({
         {
             id: 'isHeightCustom',
             type: 'switch',
-            label: 'Block Height',
+            label: 'Block height',
             switchLabel: 'Custom',
             defaultValue: false,
             show: (bundle) => bundle.getBlock('embedStyle')?.value === 'embed',
@@ -147,7 +147,7 @@ export const settings = defineSettings({
     style: [
         {
             id: 'opacity',
-            label: 'Transparent Background',
+            label: 'Transparent background',
             info: 'Enable or disable the background of the form',
             type: 'switch',
             show: (bundle) => bundle.getBlock('embedStyle')?.value === 'embed',
@@ -166,19 +166,19 @@ export const settings = defineSettings({
                 {
                     id: 'buttonBackgroundColor',
                     type: 'colorInput',
-                    label: 'Background Color',
+                    label: 'Background color',
                     defaultValue: BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE,
                 },
                 {
                     id: 'buttonBorderColor',
                     type: 'colorInput',
-                    label: 'Border Color',
+                    label: 'Border color',
                     defaultValue: BUTTON_BORDER_COLOR_DEFAULT_VALUE,
                 },
                 {
                     id: 'buttonTextColor',
                     type: 'colorInput',
-                    label: 'Text Color',
+                    label: 'Text color',
                     defaultValue: BUTTON_TEXT_COLOR_DEFAULT_VALUE,
                 },
             ],
