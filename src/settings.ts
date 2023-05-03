@@ -14,7 +14,7 @@ import {
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
 export const MIN_HEIGHT_VALUE = 200;
 export const FORM_ID_INFO =
-    'You can find <form-id> from the public URL of your form: https://form.typeform.com/to/<form-id>';
+    'You can find your <form-id> in your public form URL: https://form.typeform.com/to/<form-id>';
 const BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
 const BUTTON_BORDER_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
 const BUTTON_TEXT_COLOR_DEFAULT_VALUE: Color = { red: 255, green: 255, blue: 255, alpha: 1 };
@@ -51,6 +51,7 @@ export const settings = defineSettings({
             type: 'input',
             label: 'Typeform Form ID',
             defaultValue: '',
+            placeholder: FORM_ID_INFO,
             info: FORM_ID_INFO,
         },
         {
