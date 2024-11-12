@@ -1,5 +1,5 @@
-import { Color } from '@frontify/fondue';
-import { FC } from 'react';
+import { type Color } from '@frontify/fondue';
+import { type FC } from 'react';
 
 type Props = {
     buttonBackgroundColor: Color;

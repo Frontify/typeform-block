@@ -1,15 +1,14 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import { BlockHeight } from './types';
 import {
-    Color,
-    DropdownSize,
+    type Color,
     IconEnum,
-    MultiInputLayout,
     appendUnit,
     defineSettings,
     numericalOrPixelRule,
 } from '@frontify/guideline-blocks-settings';
+
+import { BlockHeight } from './types';
 
 export const HEIGHT_DEFAULT_VALUE = BlockHeight.Medium;
 export const MIN_HEIGHT_VALUE = 200;
@@ -25,7 +24,7 @@ export const settings = defineSettings({
             id: 'embedStyle',
             type: 'dropdown',
             defaultValue: 'embed',
-            size: DropdownSize.Large,
+            size: 'large',
             choices: [
                 {
                     value: 'embed',
@@ -160,7 +159,7 @@ export const settings = defineSettings({
             show: (bundle) =>
                 bundle.getBlock('embedStyle')?.value === 'popup' ||
                 bundle.getBlock('embedStyle')?.value === 'sidePanel',
-            layout: MultiInputLayout.Columns,
+            layout: 'columns',
             lastItemFullWidth: false,
             blocks: [
                 {

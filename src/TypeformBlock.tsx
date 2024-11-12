@@ -1,15 +1,17 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
 import 'tailwindcss/tailwind.css';
-import { FC, useCallback, useEffect, useState } from 'react';
 import { useBlockSettings, useEditorState, useReadyForPrint } from '@frontify/app-bridge';
-import type { BlockProps } from '@frontify/guideline-blocks-settings';
+import { FormControl } from '@frontify/fondue';
+import { Button, TextInput } from '@frontify/fondue/components';
+import { type BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
-import { Button, FormControl, TextInput } from '@frontify/fondue';
-import { FORM_ID_INFO } from './settings';
-import { Resizeable } from './components/Resizable';
-import { BlockHeight, Options, Settings } from './types';
+import { type FC, useCallback, useEffect, useState } from 'react';
+
 import { Button as TypeformButton } from './components/Button';
+import { Resizeable } from './components/Resizable';
+import { FORM_ID_INFO } from './settings';
+import { BlockHeight, type Options, type Settings } from './types';
 
 export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
@@ -38,10 +40,10 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
 
-    const saveInputId = useCallback(() => {
+    const saveInputId = useCallback(async () => {
         setIsReadyForPrint(false);
 
-        setBlockSettings({
+        await setBlockSettings({
             ...blockSettings,
             formId: input,
         });
@@ -55,8 +57,8 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         setInput(settingsFormId);
     }, [settingsFormId]);
 
-    const saveHeight = (height: number) => {
-        setBlockSettings({
+    const saveHeight = async (height: number) => {
+        await setBlockSettings({
             ...blockSettings,
             heightCustom: `${height}px`,
             isHeightCustom: true,
@@ -73,14 +75,13 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                                 <FormControl clickable>
                                     <TextInput
                                         value={input}
-                                        onChange={setInput}
-                                        onEnterPressed={saveInputId}
+                                        onChange={(event) => setInput(event.currentTarget.value)}
                                         placeholder="Typeform form id"
                                     />
                                 </FormControl>
                             </div>
                             <div className="tw-mt-3 sm:tw-mt-0 sm:tw-ml-3">
-                                <Button onClick={saveInputId}>Confirm</Button>
+                                <Button onPress={() => saveInputId()}>Confirm</Button>
                             </div>
                         </div>
                         <div className="tw-text-sm tw-mt-3">
@@ -107,11 +108,11 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
                 if (isEditing) {
                     return (
                         <Resizeable saveHeight={saveHeight} initialHeight={activeHeight}>
-                            <Widget {...options} />
+                            <Widget iframeProps={{ title: 'Typeform' }} {...options} />
                         </Resizeable>
                     );
                 } else {
-                    return <Widget {...options} style={{ height: activeHeight }} />;
+                    return <Widget iframeProps={{ title: 'Typeform' }} {...options} style={{ height: activeHeight }} />;
                 }
 
             case 'popup':

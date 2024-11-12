@@ -3,26 +3,32 @@
     "version": "1.0.0",
     "main": "src/index.ts",
     "scripts": {
-        "serve": "frontify-cli block serve --entryPath src/index.ts"
+        "serve": "frontify-cli serve --entryPath src/index.ts",
+        "deploy": "frontify-cli deploy --entryPath src/index.ts",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "typecheck": "tsc --noEmit"
+    },
+    "peerDependencies": {
+        "zustand": "4.5.5"
     },
     "dependencies": {
-        "@frontify/app-bridge": "3.0.0-beta.99",
-        "@frontify/fondue": "12.0.0-beta.355",
-        "@frontify/guideline-blocks-settings": "0.29.10",
-        "@typeform/embed-react": "3.2.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0"
+        "@frontify/app-bridge": "^3.11.0",
+        "@frontify/fondue": "^12.3.0",
+        "@frontify/guideline-blocks-settings": "^0.36.11",
+        "@typeform/embed-react": "^4.1.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@frontify/eslint-config-react": "0.16.2",
-        "@frontify/frontify-cli": "5.4.0",
-        "@types/react": "18.2.29",
-        "autoprefixer": "10.4.16",
-        "eslint": "8.51.0",
-        "postcss": "8.4.31",
-        "postcss-modules": "6.0.0",
-        "prettier": "3.0.3",
-        "tailwindcss": "3.3.3",
-        "typescript": "5.2.2"
+        "@frontify/eslint-config-react": "^0.17.7",
+        "@frontify/frontify-cli": "^5.8.2",
+        "@types/node": "^22.9.0",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.2.24",
+        "eslint": "^8.57.0",
+        "prettier": "^3.2.5",
+        "tailwindcss": "^3.4.3",
+        "typescript": "^5.4.4"
     }
 }
