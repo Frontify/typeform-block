@@ -10,7 +10,7 @@
         "typecheck": "tsc --noEmit"
     },
     "peerDependencies": {
-        "zustand": "4.5.5"
+        "zustand": "4.5.7"
     },
     "dependencies": {
         "@frontify/app-bridge": "^3.11.0",
