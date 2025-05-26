@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@frontify/app-bridge':
-        specifier: ^3.11.0
+        specifier: ^3.11.1
         version: 3.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@17.0.1)
       '@frontify/fondue':
         specifier: ^12.3.0
@@ -40,10 +40,10 @@ importers:
         specifier: ^22.9.0
         version: 22.15.21
       '@types/react':
-        specifier: ^18.3.22
+        specifier: ^18.3.12
         version: 18.3.22
       '@types/react-dom':
-        specifier: ^18.3.7
+        specifier: ^18.2.24
         version: 18.3.7(@types/react@18.3.22)
       autoprefixer:
         specifier: ^10.4.20
@@ -4674,8 +4674,8 @@ packages:
     resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
     engines: {node: '>=14.16'}
 
-  type-fest@4.26.1:
-    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
+  type-fest@4.41.0:
+    resolution: {integrity: sha512-TeTSQ6H5YHvpqVwBRcnLDCBnDOHWYu7IvGbHT6N8AOymcr9PJGjc1GTtiWZTYg0NCgYwvnYWEkVChQAr9bjfwA==}
     engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
@@ -5367,7 +5367,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       sinon: 17.0.1
-      type-fest: 4.26.1
+      type-fest: 4.41.0
 
   '@frontify/eslint-config-basic@0.20.6(eslint@8.57.1)(prettier@3.5.3)(typescript@5.8.3)':
     dependencies:
@@ -10615,7 +10615,7 @@ snapshots:
 
   type-fest@3.13.1: {}
 
-  type-fest@4.26.1: {}
+  type-fest@4.41.0: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
