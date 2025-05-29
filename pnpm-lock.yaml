@@ -12,7 +12,7 @@ importers:
         specifier: ^3.11.0
         version: 3.11.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@17.0.1)
       '@frontify/fondue':
-        specifier: ^12.3.0
+        specifier: ^12.9.6
         version: 12.9.6(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@22.15.24)(@types/react-dom@18.3.7(@types/react@18.3.23))(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.110.3(slate@0.102.0))(slate-hyperscript@0.100.0(slate@0.102.0))(tailwindcss@3.4.17)(zustand@4.5.7(@types/react@18.3.23)(immer@10.1.1)(react@18.3.1))
       '@frontify/guideline-blocks-settings':
         specifier: ^0.37.0
@@ -37,7 +37,7 @@ importers:
         specifier: ^5.8.2
         version: 5.8.8(@types/node@22.15.24)
       '@types/node':
-        specifier: ^22.15.24
+        specifier: ^22.9.0
         version: 22.15.24
       '@types/react':
         specifier: ^18.3.12
@@ -141,10 +141,6 @@ packages:
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
-
-  '@babel/runtime@7.27.1':
-    resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
-    engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.27.3':
     resolution: {integrity: sha512-7EYtGezsdiDMyY80+65EzwiGmcJqpmcZCojSXaRgdrBaGtWTgDZKq69cPIVped6MkIM78cTQ2GOiEYjwOlG4xw==}
@@ -3414,8 +3410,8 @@ packages:
       react:
         optional: true
 
-  jotai@2.12.4:
-    resolution: {integrity: sha512-eFXLJol4oOLM8BS1+QV+XwaYQITG8n1tatBCFl4F5HE3zR5j2WIK8QpMt7VJIYmlogNUZfvB7wjwLoVk+umB9Q==}
+  jotai@2.12.5:
+    resolution: {integrity: sha512-G8m32HW3lSmcz/4mbqx0hgJIQ0ekndKWiYP7kWVKi0p6saLXdSoye+FZiOFyonnd7Q482LCzm8sMDl7Ar1NWDw==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@types/react': '>=17.0.0'
@@ -4994,8 +4990,6 @@ snapshots:
     dependencies:
       '@babel/core': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
-
-  '@babel/runtime@7.27.1': {}
 
   '@babel/runtime@7.27.3': {}
 
@@ -7193,9 +7187,9 @@ snapshots:
       '@udecode/utils': 31.0.0
       clsx: 1.2.1
       is-hotkey: 0.2.0
-      jotai: 2.12.4(@types/react@18.3.23)(react@18.3.1)
-      jotai-optics: 0.3.2(jotai@2.12.4(@types/react@18.3.23)(react@18.3.1))(optics-ts@2.4.1)
-      jotai-x: 1.2.4(@types/react@18.3.23)(jotai@2.12.4(@types/react@18.3.23)(react@18.3.1))(react@18.3.1)
+      jotai: 2.12.5(@types/react@18.3.23)(react@18.3.1)
+      jotai-optics: 0.3.2(jotai@2.12.5(@types/react@18.3.23)(react@18.3.1))(optics-ts@2.4.1)
+      jotai-x: 1.2.4(@types/react@18.3.23)(jotai@2.12.5(@types/react@18.3.23)(react@18.3.1))(react@18.3.1)
       lodash: 4.17.21
       nanoid: 3.3.11
       optics-ts: 2.4.1
@@ -8133,7 +8127,7 @@ snapshots:
 
   downshift@6.1.12(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.27.1
+      '@babel/runtime': 7.27.3
       compute-scroll-into-view: 1.0.20
       prop-types: 15.8.1
       react: 18.3.1
@@ -9056,19 +9050,19 @@ snapshots:
 
   jiti@1.21.7: {}
 
-  jotai-optics@0.3.2(jotai@2.12.4(@types/react@18.3.23)(react@18.3.1))(optics-ts@2.4.1):
+  jotai-optics@0.3.2(jotai@2.12.5(@types/react@18.3.23)(react@18.3.1))(optics-ts@2.4.1):
     dependencies:
-      jotai: 2.12.4(@types/react@18.3.23)(react@18.3.1)
+      jotai: 2.12.5(@types/react@18.3.23)(react@18.3.1)
       optics-ts: 2.4.1
 
-  jotai-x@1.2.4(@types/react@18.3.23)(jotai@2.12.4(@types/react@18.3.23)(react@18.3.1))(react@18.3.1):
+  jotai-x@1.2.4(@types/react@18.3.23)(jotai@2.12.5(@types/react@18.3.23)(react@18.3.1))(react@18.3.1):
     dependencies:
-      jotai: 2.12.4(@types/react@18.3.23)(react@18.3.1)
+      jotai: 2.12.5(@types/react@18.3.23)(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.23
       react: 18.3.1
 
-  jotai@2.12.4(@types/react@18.3.23)(react@18.3.1):
+  jotai@2.12.5(@types/react@18.3.23)(react@18.3.1):
     optionalDependencies:
       '@types/react': 18.3.23
       react: 18.3.1
@@ -9908,7 +9902,7 @@ snapshots:
 
   react-textarea-autosize@8.5.9(@types/react@18.3.23)(react@18.3.1):
     dependencies:
-      '@babel/runtime': 7.27.1
+      '@babel/runtime': 7.27.3
       react: 18.3.1
       use-composed-ref: 1.4.0(@types/react@18.3.23)(react@18.3.1)
       use-latest: 1.3.0(@types/react@18.3.23)(react@18.3.1)
@@ -9991,7 +9985,7 @@ snapshots:
 
   redux@4.2.1:
     dependencies:
-      '@babel/runtime': 7.27.1
+      '@babel/runtime': 7.27.3
 
   reflect.getprototypeof@1.0.6:
     dependencies:
