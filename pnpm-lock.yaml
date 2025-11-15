@@ -18,8 +18,8 @@ importers:
         specifier: ^0.38.0
         version: 0.38.1(@babel/core@7.28.5)(@babel/template@7.27.2)(@frontify/app-bridge@3.11.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.0.0))(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@22.19.1)(@types/react-dom@18.3.7(@types/react@18.3.26))(@types/react@18.3.26)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.100.0(slate@0.102.0))(tailwindcss@3.4.18(yaml@2.8.1))(zustand@4.5.7(@types/react@18.3.26)(immer@10.2.0)(react@18.3.1))
       '@typeform/embed-react':
-        specifier: ^4.1.0
-        version: 4.6.0(react@18.3.1)
+        specifier: ^4.7.0
+        version: 4.7.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -37,7 +37,7 @@ importers:
         specifier: ^5.8.2
         version: 5.9.4(@types/node@22.19.1)
       '@types/node':
-        specifier: ^22.19.1
+        specifier: ^22.9.0
         version: 22.19.1
       '@types/react':
         specifier: ^18.3.12
@@ -1680,14 +1680,14 @@ packages:
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
-  '@typeform/embed-react@4.6.0':
-    resolution: {integrity: sha512-PvaCThmPyZCOqnAbqvQ5nLNeUaAAqULxQor9MW7HHmDqoWtPW6RmiPc8Tg0RkPFCANSnlzORFymj5didORn3pA==}
+  '@typeform/embed-react@4.7.0':
+    resolution: {integrity: sha512-1fLS8sM44LZ0Oql9LTychL69mjO3hw0555hl2/KzRrbFyruEwrpIckfCNaeRfpP4OOQOgXrrZpL27C+isS90SQ==}
     engines: {node: '>=10'}
     peerDependencies:
       react: '>=16.8.0'
 
-  '@typeform/embed@5.5.0':
-    resolution: {integrity: sha512-+JIwsOfok9MjoKsDw8YbQsAZYThKEARK+m/hSZxrU6s5WoZxVnwDsO+O5HyrMtH+kOuNb5kIvQM2lPc0c33c2g==}
+  '@typeform/embed@5.5.1':
+    resolution: {integrity: sha512-lFApRl5KsGb02R8bEwsXd+BCziLH8M0KDAZq3SGiEa/Xfc+GKjlntw6+m70TXTiHJKECJbbgpPmT0EbDLWaq6g==}
     engines: {node: '>=10'}
 
   '@types/babel__core@7.20.5':
@@ -7269,13 +7269,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@typeform/embed-react@4.6.0(react@18.3.1)':
+  '@typeform/embed-react@4.7.0(react@18.3.1)':
     dependencies:
-      '@typeform/embed': 5.5.0
+      '@typeform/embed': 5.5.1
       fast-deep-equal: 3.1.3
       react: 18.3.1
 
-  '@typeform/embed@5.5.0': {}
+  '@typeform/embed@5.5.1': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
