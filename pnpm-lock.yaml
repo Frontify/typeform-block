@@ -12,7 +12,7 @@ importers:
         specifier: ^3.11.0
         version: 3.12.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.0.0)
       '@frontify/fondue':
-        specifier: ^12.14.5
+        specifier: ^12.3.0
         version: 12.14.5(@babel/core@7.28.5)(@babel/template@7.27.2)(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@22.19.1)(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.100.0(slate@0.102.0))(tailwindcss@3.4.18(yaml@2.8.2))(zustand@4.5.7(@types/react@18.3.27)(immer@10.2.0)(react@18.3.1))
       '@frontify/guideline-blocks-settings':
         specifier: ^0.38.0
@@ -32,7 +32,7 @@ importers:
     devDependencies:
       '@frontify/eslint-config-react':
         specifier: ^0.17.7
-        version: 0.17.7(eslint@8.57.1)(prettier@3.7.3)(react@18.3.1)(typescript@5.9.3)
+        version: 0.17.7(eslint@8.57.1)(prettier@3.7.4)(react@18.3.1)(typescript@5.9.3)
       '@frontify/frontify-cli':
         specifier: ^5.8.2
         version: 5.9.4(@types/node@22.19.1)
@@ -52,8 +52,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.1
       prettier:
-        specifier: ^3.2.5
-        version: 3.7.3
+        specifier: ^3.7.4
+        version: 3.7.4
       tailwindcss:
         specifier: ^3.4.3
         version: 3.4.18(yaml@2.8.2)
@@ -4252,8 +4252,8 @@ packages:
     resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
     engines: {node: '>=6.0.0'}
 
-  prettier@3.7.3:
-    resolution: {integrity: sha512-QgODejq9K3OzoBbuyobZlUhznP5SKwPqp+6Q6xw6o8gnhr4O85L2U915iM2IDcfF2NPXVaM9zlo9tdwipnYwzg==}
+  prettier@3.7.4:
+    resolution: {integrity: sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5581,7 +5581,7 @@ snapshots:
       sinon: 21.0.0
       type-fest: 4.41.0
 
-  '@frontify/eslint-config-basic@0.20.6(eslint@8.57.1)(prettier@3.7.3)(typescript@5.9.3)':
+  '@frontify/eslint-config-basic@0.20.6(eslint@8.57.1)(prettier@3.7.4)(typescript@5.9.3)':
     dependencies:
       '@typescript-eslint/eslint-plugin': 7.18.0(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
       '@typescript-eslint/parser': 7.18.0(eslint@8.57.1)(typescript@5.9.3)
@@ -5594,11 +5594,11 @@ snapshots:
       eslint-plugin-lodash: 8.0.0(eslint@8.57.1)
       eslint-plugin-markdown: 5.1.0(eslint@8.57.1)
       eslint-plugin-no-only-tests: 3.3.0
-      eslint-plugin-prettier: 5.5.4(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.7.3)
+      eslint-plugin-prettier: 5.5.4(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.7.4)
       eslint-plugin-promise: 6.6.0(eslint@8.57.1)
       eslint-plugin-unicorn: 54.0.0(eslint@8.57.1)
       eslint-plugin-yml: 1.19.0(eslint@8.57.1)
-      prettier: 3.7.3
+      prettier: 3.7.4
       yaml-eslint-parser: 1.3.1
     transitivePeerDependencies:
       - '@eslint/json'
@@ -5608,14 +5608,14 @@ snapshots:
       - supports-color
       - typescript
 
-  '@frontify/eslint-config-react@0.17.7(eslint@8.57.1)(prettier@3.7.3)(react@18.3.1)(typescript@5.9.3)':
+  '@frontify/eslint-config-react@0.17.7(eslint@8.57.1)(prettier@3.7.4)(react@18.3.1)(typescript@5.9.3)':
     dependencies:
-      '@frontify/eslint-config-basic': 0.20.6(eslint@8.57.1)(prettier@3.7.3)(typescript@5.9.3)
+      '@frontify/eslint-config-basic': 0.20.6(eslint@8.57.1)(prettier@3.7.4)(typescript@5.9.3)
       eslint: 8.57.1
       eslint-plugin-jsx-a11y: 6.10.2(eslint@8.57.1)
       eslint-plugin-react: 7.37.5(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
-      prettier: 3.7.3
+      prettier: 3.7.4
       react: 18.3.1
     transitivePeerDependencies:
       - '@eslint/json'
@@ -8916,10 +8916,10 @@ snapshots:
 
   eslint-plugin-no-only-tests@3.3.0: {}
 
-  eslint-plugin-prettier@5.5.4(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.7.3):
+  eslint-plugin-prettier@5.5.4(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.7.4):
     dependencies:
       eslint: 8.57.1
-      prettier: 3.7.3
+      prettier: 3.7.4
       prettier-linter-helpers: 1.0.0
       synckit: 0.11.11
     optionalDependencies:
@@ -10311,7 +10311,7 @@ snapshots:
     dependencies:
       fast-diff: 1.3.0
 
-  prettier@3.7.3: {}
+  prettier@3.7.4: {}
 
   prismjs@1.30.0: {}
 
