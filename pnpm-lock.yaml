@@ -34,7 +34,7 @@ importers:
         specifier: ^0.17.7
         version: 0.17.7(eslint@8.57.1)(prettier@3.7.4)(react@18.3.1)(typescript@5.9.3)
       '@frontify/frontify-cli':
-        specifier: ^5.9.5
+        specifier: ^5.8.2
         version: 5.9.5(@types/node@22.19.1)
       '@types/node':
         specifier: ^22.9.0
@@ -624,8 +624,8 @@ packages:
       react: ^18
       react-dom: ^18
 
-  '@frontify/fondue-components@24.1.0':
-    resolution: {integrity: sha512-MyieIpEDxPEuz7813f/YfxR9ubZpH4NXLYpQwmBJwZHIIwzZ+pg6ESZcI5UkLhahuqvjHch+v95bAIWEEwHZtQ==}
+  '@frontify/fondue-components@24.2.0':
+    resolution: {integrity: sha512-usBQP5l/HXcX6b7d6r2zD/Nd5FfdZ0uoBTkw565TNt1Yj9P+MxiZChKLenLMiW57xuiymtT/eEqkBqrH/4rjXQ==}
     engines: {node: '>=18'}
     peerDependencies:
       '@frontify/fondue-icons': ^0.22.0
@@ -665,8 +665,8 @@ packages:
       react: ^18
       react-dom: ^18
 
-  '@frontify/sidebar-settings@0.10.7':
-    resolution: {integrity: sha512-oQgpbo3kPdMbTPrZu8HhOYsahDcUm834gI5fgf6HVh9dqrIphqowgiI6niRD3ptpuwcSISRMRwUDwKn2fPnz0A==}
+  '@frontify/sidebar-settings@0.10.8':
+    resolution: {integrity: sha512-gXv/piA1S9jZwS9Sc7/a34AhQ+DFaLHYo/RMjbfeKCksvnK2S6m6+12zevHaUoHsX4cEy0IEe+hFOPnS67B+OQ==}
     peerDependencies:
       react: ^18
       react-dom: ^18
@@ -2655,12 +2655,8 @@ packages:
   base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
 
-  baseline-browser-mapping@2.8.32:
-    resolution: {integrity: sha512-OPz5aBThlyLFgxyhdwf/s2+8ab3OvT7AdTNvKHBwpXomIYeXqpUUuT8LrdtxZSsWJ4R4CU1un4XGh5Ez3nlTpw==}
-    hasBin: true
-
-  baseline-browser-mapping@2.9.2:
-    resolution: {integrity: sha512-PxSsosKQjI38iXkmb3d0Y32efqyA0uW4s41u4IVBsLlWLhCiYNpH/AfNOVWRqCQBlD8TFJTz6OUWNd4DFJCnmw==}
+  baseline-browser-mapping@2.9.4:
+    resolution: {integrity: sha512-ZCQ9GEWl73BVm8bu5Fts8nt7MHdbt5vY9bP6WGnUh+r3l8M7CgfyTlwsgCbMC66BNxPr6Xoce3j66Ms5YUQTNA==}
     hasBin: true
 
   binary-extensions@2.3.0:
@@ -2676,11 +2672,6 @@ packages:
   braces@3.0.3:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
-
-  browserslist@4.28.0:
-    resolution: {integrity: sha512-tbydkR/CxfMwelN0vwdP/pLkDwyAASZ+VfWm4EOwlB6SWhx1sYnWLqo8N5j0rAzPfzfRaxt0mM/4wPU/Su84RQ==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
 
   browserslist@4.28.1:
     resolution: {integrity: sha512-ZC5Bd0LgJXgwGqUknZY/vkUQ04r8NXnJZ3yYi4vDmSiZmC/pdSN0NbNRPxZpbtO4uAfDUAFffO8IZoM3Gj8IkA==}
@@ -2725,9 +2716,6 @@ packages:
   camelcase-css@2.0.1:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
-
-  caniuse-lite@1.0.30001757:
-    resolution: {integrity: sha512-r0nnL/I28Zi/yjk1el6ilj27tKcdjLsNqAOZr0yVjWPrSQyHgKI2INaEWw21bAQSv2LXRt1XuCS/GomNpWOxsQ==}
 
   caniuse-lite@1.0.30001759:
     resolution: {integrity: sha512-Pzfx9fOKoKvevQf8oCXoyNRQ5QyxJj+3O0Rqx2V5oxT61KGx8+n6hV/IUyJeifUci2clnmmKVpvtiqRzgiWjSw==}
@@ -3033,11 +3021,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.262:
-    resolution: {integrity: sha512-NlAsMteRHek05jRUxUR0a5jpjYq9ykk6+kO0yRaMi5moe7u0fVIOeQ3Y30A8dIiWFBNUoQGi1ljb1i5VtS9WQQ==}
-
-  electron-to-chromium@1.5.265:
-    resolution: {integrity: sha512-B7IkLR1/AE+9jR2LtVF/1/6PFhY5TlnEHnlrKmGk7PvkJibg5jr+mLXLLzq3QYl6PA1T/vLDthQPqIPAlS/PPA==}
+  electron-to-chromium@1.5.266:
+    resolution: {integrity: sha512-kgWEglXvkEfMH7rxP5OSZZwnaDWT7J9EoZCujhnpLbfi0bbNtRkgdX2E3gt0Uer11c61qCYktB3hwkAS325sJg==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -3890,8 +3875,8 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  jsonc-eslint-parser@2.4.1:
-    resolution: {integrity: sha512-uuPNLJkKN8NXAlZlQ6kmUF9qO+T6Kyd7oV4+/7yy8Jz6+MZNyhPq8EdLpdfnPVzUC8qSf1b4j1azKaGnFsjmsw==}
+  jsonc-eslint-parser@2.4.2:
+    resolution: {integrity: sha512-1e4qoRgnn448pRuMvKGsFFymUCquZV0mpGgOyIKNgD3JVDTsVJyRBGH/Fm0tBb8WsWGgmB1mDe6/yJMQM37DUA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
   jsonfile@6.2.0:
@@ -5072,8 +5057,8 @@ packages:
     resolution: {integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==}
     engines: {node: '>=8'}
 
-  type-fest@5.3.0:
-    resolution: {integrity: sha512-d9CwU93nN0IA1QL+GSNDdwLAu1Ew5ZjTwupvedwg3WdfoH6pIDvYQ2hV0Uc2nKBLPq7NB5apCx57MLS5qlmO5g==}
+  type-fest@5.3.1:
+    resolution: {integrity: sha512-VCn+LMHbd4t6sF3wfU/+HKT63C9OoyrSIf4b+vtWHpt2U7/4InZG467YDNMFMR70DdHjAdpPWmw2lzRdg0Xqqg==}
     engines: {node: '>=20'}
 
   typed-array-buffer@1.0.3:
@@ -5141,12 +5126,6 @@ packages:
 
   unrs-resolver@1.11.1:
     resolution: {integrity: sha512-bSjt9pjaEBnNiGgc9rUiHGKv5l4/TGzDmYw3RhnkJGtLhbnnA/5qJj7x3dNDCRx/PJxu774LlH8lCOlB4hEfKg==}
-
-  update-browserslist-db@1.1.4:
-    resolution: {integrity: sha512-q0SPT4xyU84saUX+tomz1WLkxUbuaJnR1xWt17M7fJtEJigJeWUNGUqrauFXsHnqev9y9JTRGwk13tFBuKby4A==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
 
   update-browserslist-db@1.2.2:
     resolution: {integrity: sha512-E85pfNzMQ9jpKkA7+TJAi4TJN+tBCuWh5rUcS/sv6cFi+1q9LYDwDI5dpUL0u/73EElyQ8d3TEaeW4sPedBqYA==}
@@ -5334,8 +5313,8 @@ packages:
   yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}
 
-  yaml-eslint-parser@1.3.1:
-    resolution: {integrity: sha512-MdSgP9YA9QjtAO2+lt4O7V2bnH22LPnfeVLiQqjY3cOyn8dy/Ief8otjIe6SPPTK03nM7O3Yl0LTfWuF7l+9yw==}
+  yaml-eslint-parser@1.3.2:
+    resolution: {integrity: sha512-odxVsHAkZYYglR30aPYRY4nUGJnoJ2y1ww2HDvZALo0BDETv9kWbi16J52eHs+PWRNmF4ub6nZqfVOeesOvntg==}
     engines: {node: ^14.17.0 || >=16.0.0}
 
   yaml@2.8.2:
@@ -5847,7 +5826,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       sinon: 21.0.0
-      type-fest: 5.3.0
+      type-fest: 5.3.1
 
   '@frontify/eslint-config-basic@0.20.6(eslint@8.57.1)(prettier@3.7.4)(typescript@5.9.3)':
     dependencies:
@@ -5867,7 +5846,7 @@ snapshots:
       eslint-plugin-unicorn: 54.0.0(eslint@8.57.1)
       eslint-plugin-yml: 1.19.0(eslint@8.57.1)
       prettier: 3.7.4
-      yaml-eslint-parser: 1.3.1
+      yaml-eslint-parser: 1.3.2
     transitivePeerDependencies:
       - '@eslint/json'
       - '@types/eslint'
@@ -5913,7 +5892,7 @@ snapshots:
     transitivePeerDependencies:
       - '@react-spring/web'
 
-  '@frontify/fondue-components@24.1.0(@frontify/fondue-icons@0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@frontify/fondue-tokens@4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))':
+  '@frontify/fondue-components@24.2.0(@frontify/fondue-icons@0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@frontify/fondue-tokens@4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))':
     dependencies:
       '@frontify/fondue-icons': 0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
       '@frontify/fondue-tokens': 4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
@@ -5969,7 +5948,7 @@ snapshots:
       '@dnd-kit/utilities': 3.2.2(react@18.3.1)
       '@floating-ui/dom': 1.7.4
       '@frontify/fondue-charts': 6.0.5(@frontify/fondue-tokens@4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@frontify/fondue-components': 24.1.0(@frontify/fondue-icons@0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@frontify/fondue-tokens@4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
+      '@frontify/fondue-components': 24.2.0(@frontify/fondue-icons@0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@frontify/fondue-tokens@4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2)))(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
       '@frontify/fondue-icons': 0.22.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
       '@frontify/fondue-tokens': 4.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.18(yaml@2.8.2))
       '@popperjs/core': 2.11.8
@@ -6113,7 +6092,7 @@ snapshots:
       '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@frontify/app-bridge': 3.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.0.0)
       '@frontify/fondue': 12.14.5(@babel/core@7.28.5)(@babel/template@7.27.2)(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@22.19.1)(@types/react-dom@18.3.7(@types/react@18.3.27))(@types/react@18.3.27)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.100.0(slate@0.102.0))(tailwindcss@3.4.18(yaml@2.8.2))(zustand@4.5.7(@types/react@18.3.27)(immer@10.2.0)(react@18.3.1))
-      '@frontify/sidebar-settings': 0.10.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/sidebar-settings': 0.10.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/focus': 3.21.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-stately/overlays': 3.6.20(react@18.3.1)
       '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.18(yaml@2.8.2))
@@ -6136,7 +6115,7 @@ snapshots:
       - tailwindcss
       - zustand
 
-  '@frontify/sidebar-settings@0.10.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@frontify/sidebar-settings@0.10.8(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -8518,8 +8497,8 @@ snapshots:
 
   autoprefixer@10.4.22(postcss@8.5.6):
     dependencies:
-      browserslist: 4.28.0
-      caniuse-lite: 1.0.30001757
+      browserslist: 4.28.1
+      caniuse-lite: 1.0.30001759
       fraction.js: 5.3.4
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -8551,9 +8530,7 @@ snapshots:
 
   base64-js@1.5.1: {}
 
-  baseline-browser-mapping@2.8.32: {}
-
-  baseline-browser-mapping@2.9.2: {}
+  baseline-browser-mapping@2.9.4: {}
 
   binary-extensions@2.3.0: {}
 
@@ -8570,19 +8547,11 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.28.0:
-    dependencies:
-      baseline-browser-mapping: 2.8.32
-      caniuse-lite: 1.0.30001757
-      electron-to-chromium: 1.5.262
-      node-releases: 2.0.27
-      update-browserslist-db: 1.1.4(browserslist@4.28.0)
-
   browserslist@4.28.1:
     dependencies:
-      baseline-browser-mapping: 2.9.2
+      baseline-browser-mapping: 2.9.4
       caniuse-lite: 1.0.30001759
-      electron-to-chromium: 1.5.265
+      electron-to-chromium: 1.5.266
       node-releases: 2.0.27
       update-browserslist-db: 1.2.2(browserslist@4.28.1)
 
@@ -8621,8 +8590,6 @@ snapshots:
   callsites@3.1.0: {}
 
   camelcase-css@2.0.1: {}
-
-  caniuse-lite@1.0.30001757: {}
 
   caniuse-lite@1.0.30001759: {}
 
@@ -8705,7 +8672,7 @@ snapshots:
 
   core-js-compat@3.47.0:
     dependencies:
-      browserslist: 4.28.0
+      browserslist: 4.28.1
 
   core-util-is@1.0.3: {}
 
@@ -8885,7 +8852,7 @@ snapshots:
 
   dot-prop@10.1.0:
     dependencies:
-      type-fest: 5.3.0
+      type-fest: 5.3.1
 
   downshift@6.1.12(react@18.3.1):
     dependencies:
@@ -8913,9 +8880,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.262: {}
-
-  electron-to-chromium@1.5.265: {}
+  electron-to-chromium@1.5.266: {}
 
   emoji-regex@8.0.0: {}
 
@@ -9127,11 +9092,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-json-compat-utils@0.2.1(eslint@8.57.1)(jsonc-eslint-parser@2.4.1):
+  eslint-json-compat-utils@0.2.1(eslint@8.57.1)(jsonc-eslint-parser@2.4.2):
     dependencies:
       eslint: 8.57.1
       esquery: 1.6.0
-      jsonc-eslint-parser: 2.4.1
+      jsonc-eslint-parser: 2.4.2
 
   eslint-module-utils@2.12.1(@typescript-eslint/parser@7.18.0(eslint@8.57.1)(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
     dependencies:
@@ -9185,10 +9150,10 @@ snapshots:
       diff-sequences: 27.5.1
       eslint: 8.57.1
       eslint-compat-utils: 0.6.5(eslint@8.57.1)
-      eslint-json-compat-utils: 0.2.1(eslint@8.57.1)(jsonc-eslint-parser@2.4.1)
+      eslint-json-compat-utils: 0.2.1(eslint@8.57.1)(jsonc-eslint-parser@2.4.2)
       espree: 10.4.0
       graphemer: 1.4.0
-      jsonc-eslint-parser: 2.4.1
+      jsonc-eslint-parser: 2.4.2
       natural-compare: 1.4.0
       synckit: 0.11.11
     transitivePeerDependencies:
@@ -9302,7 +9267,7 @@ snapshots:
       eslint: 8.57.1
       eslint-compat-utils: 0.6.5(eslint@8.57.1)
       natural-compare: 1.4.0
-      yaml-eslint-parser: 1.3.1
+      yaml-eslint-parser: 1.3.2
     transitivePeerDependencies:
       - supports-color
 
@@ -9938,7 +9903,7 @@ snapshots:
 
   json5@2.2.3: {}
 
-  jsonc-eslint-parser@2.4.1:
+  jsonc-eslint-parser@2.4.2:
     dependencies:
       acorn: 8.15.0
       eslint-visitor-keys: 3.4.3
@@ -11372,7 +11337,7 @@ snapshots:
 
   type-fest@0.8.1: {}
 
-  type-fest@5.3.0:
+  type-fest@5.3.1:
     dependencies:
       tagged-tag: 1.0.0
 
@@ -11495,12 +11460,6 @@ snapshots:
       '@unrs/resolver-binding-win32-arm64-msvc': 1.11.1
       '@unrs/resolver-binding-win32-ia32-msvc': 1.11.1
       '@unrs/resolver-binding-win32-x64-msvc': 1.11.1
-
-  update-browserslist-db@1.1.4(browserslist@4.28.0):
-    dependencies:
-      browserslist: 4.28.0
-      escalade: 3.2.0
-      picocolors: 1.1.1
 
   update-browserslist-db@1.2.2(browserslist@4.28.1):
     dependencies:
@@ -11681,7 +11640,7 @@ snapshots:
 
   yallist@3.1.1: {}
 
-  yaml-eslint-parser@1.3.1:
+  yaml-eslint-parser@1.3.2:
     dependencies:
       eslint-visitor-keys: 3.4.3
       yaml: 2.8.2
