@@ -22,7 +22,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
-        "@frontify/eslint-config-react": "^0.17.7",
+        "@frontify/eslint-config-react": "^1.0.0",
         "@frontify/frontify-cli": "^5.8.2",
         "@types/node": "^22.9.0",
         "@types/react": "^18.3.12",
