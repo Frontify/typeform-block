@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@frontify/app-bridge':
-        specifier: ^3.12.6
+        specifier: ^3.11.0
         version: 3.12.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.0.2)
       '@frontify/fondue':
         specifier: ^12.3.0
@@ -18,8 +18,8 @@ importers:
         specifier: ^0.38.0
         version: 0.38.1(@babel/core@7.29.0)(@babel/template@7.28.6)(@frontify/app-bridge@3.12.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.0.2))(@react-spring/web@9.7.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/node@22.19.15)(@types/react-dom@18.3.7(@types/react@18.3.28))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.100.0(slate@0.102.0))(tailwindcss@3.4.19(yaml@2.8.2))(zustand@4.5.7(@types/react@18.3.28)(immer@10.2.0)(react@18.3.1))
       '@typeform/embed-react':
-        specifier: ^4.1.0
-        version: 4.11.0(react@18.3.1)
+        specifier: ^5.0.0
+        version: 5.0.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -1870,15 +1870,15 @@ packages:
   '@tybys/wasm-util@0.10.1':
     resolution: {integrity: sha512-9tTaPJLSiejZKx+Bmog4uSubteqTvFrVrURwkmHixBo0G4seD0zUxp98E1DzUBJxLQ3NPwXrGKDiVjwx/DpPsg==}
 
-  '@typeform/embed-react@4.11.0':
-    resolution: {integrity: sha512-UOMdJPPBqH7eAtxbQyDVMGeSOJuj1tJ5s2EU75D5dxxx1nUlDUXJtIdUNdly8uqm+ebtVA3rHcJfdhmv43gfbQ==}
-    engines: {node: '>=10'}
+  '@typeform/embed-react@5.0.0':
+    resolution: {integrity: sha512-HlBxVJBEtf15Mjp6bYnoO91z2SnOLkqkJCflKsuUEqJSauf1RDSTl0X00AJqOsb+SQ8C7kWkGHceXrlEUii4mg==}
+    engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
 
-  '@typeform/embed@5.10.0':
-    resolution: {integrity: sha512-AGjeKJ9VqiuZS9Z35fvRAKkbMfabMNxooF6csd/BWYJmAWLI5ZR68xLMFJxk2SiN5mNBVx1o6NWbc9jxaNpHJQ==}
-    engines: {node: '>=10'}
+  '@typeform/embed@6.0.0':
+    resolution: {integrity: sha512-ShV9P8/I9Cp24vJEDyb1huWAbPE4T6d7sE6jux03YPH67RzOE5cUrEuZ4vq0rpiGbWvpmhRLSZKspBC8SstN4Q==}
+    engines: {node: '>=18'}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -7587,13 +7587,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@typeform/embed-react@4.11.0(react@18.3.1)':
+  '@typeform/embed-react@5.0.0(react@18.3.1)':
     dependencies:
-      '@typeform/embed': 5.10.0
+      '@typeform/embed': 6.0.0
       fast-deep-equal: 3.1.3
       react: 18.3.1
 
-  '@typeform/embed@5.10.0': {}
+  '@typeform/embed@6.0.0': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
