@@ -48,7 +48,7 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
     };
 
     return (
-        <div className="tw-grid tw-grid-col tw-min-w-full tw-overflow-hidden">
+        <div className="tw-min-w-full tw-overflow-hidden">
             <div className="tw-grid tw-justify-items-stretch" style={{ height: height ?? initialHeight }}>
                 {active && (
                     <div className="tw-fixed tw-top-0 tw-bottom-0 tw-right-0 tw-left-0 tw-select-none tw-z-40" />
@@ -59,9 +59,9 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
             <button
                 type="button"
                 onMouseDown={handler}
-                className="tw-cursor-ns-resize tw-w-full tw-pt-3 tw-h-full tw-bg-surface tw-z-50"
+                className="tw-flex tw-justify-center tw-w-full tw-pt-3 tw-pb-1 tw-border-none tw-cursor-ns-resize tw-bg-surface tw-z-50"
             >
-                <div className="tw-w-8 tw-h-2 tw-bg-line-mid tw-border tw-border-line-strong tw-rounded-[100px] tw-mx-auto tw-ml-[50%] tw--translate-x-[50%]" />
+                <span className="tw-block tw-w-8 tw-h-2 tw-bg-line-mid tw-border tw-border-line-strong tw-rounded-full" />
             </button>
         </div>
     );
