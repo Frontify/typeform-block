@@ -136,7 +136,7 @@ const TypeformBlockContent: FC<BlockProps> = ({ appBridge }) => {
             >
                 <TypeformTrigger
                     {...options}
-                    as="button"
+                    buttonProps={{ type: 'button' }}
                     className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
                 >
                     {buttonText}

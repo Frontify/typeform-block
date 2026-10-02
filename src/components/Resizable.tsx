@@ -16,24 +16,19 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
     const [active, setActive] = useState(false);
 
     useEffect(() => {
-        if (!active && height !== activeHeight) {
-            saveHeight(height);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [active]);
-
-    useEffect(() => {
         setHeight(activeHeight);
     }, [activeHeight]);
 
     const handler = (mouseDownEvent: ReactMouseEvent) => {
         const startSize = height;
         const startPosition = mouseDownEvent.pageY;
+        let latestHeight = startSize;
 
         const onMouseMove = (mouseMoveEvent: MouseEvent) => {
             setActive(true);
             const newHeight = startSize - startPosition + mouseMoveEvent.pageY;
             if (newHeight > MIN_HEIGHT_VALUE) {
+                latestHeight = newHeight;
                 setHeight(newHeight);
             }
         };
@@ -41,6 +36,9 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
         const onMouseUp = () => {
             setActive(false);
             document.body.removeEventListener('mousemove', onMouseMove);
+            if (latestHeight !== startSize) {
+                saveHeight(latestHeight);
+            }
         };
 
         document.body.addEventListener('mousemove', onMouseMove);
