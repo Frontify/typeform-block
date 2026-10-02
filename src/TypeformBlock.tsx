@@ -2,7 +2,6 @@
 
 import 'tailwindcss/tailwind.css';
 import { useBlockSettings, useEditorState, useReadyForPrint } from '@frontify/app-bridge';
-import { FormControl } from '@frontify/fondue';
 import { Button, TextInput } from '@frontify/fondue/components';
 import { type BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
@@ -60,23 +59,22 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     if (!settingsFormId) {
         if (isEditing) {
             return (
-                <div className="tw-bg-black-5 tw-p-20 tw-text-black-40">
+                <div className="tw-bg-surface-dim tw-p-20 tw-text-low-contrast">
                     <div className="tw-max-w-lg tw-mx-auto">
                         <div className="sm:tw-flex sm:tw-items-center">
                             <div className="tw-w-full">
-                                <FormControl clickable>
-                                    <TextInput
-                                        value={input}
-                                        onChange={(event) => setInput(event.currentTarget.value)}
-                                        placeholder="Typeform form id"
-                                    />
-                                </FormControl>
+                                <TextInput
+                                    value={input}
+                                    onChange={(event) => setInput(event.currentTarget.value)}
+                                    placeholder="Typeform form id"
+                                    aria-label="Typeform form id"
+                                />
                             </div>
                             <div className="tw-mt-3 sm:tw-mt-0 sm:tw-ml-3">
                                 <Button onPress={() => saveInputId()}>Confirm</Button>
                             </div>
                         </div>
-                        <div className="tw-text-sm tw-mt-3">
+                        <div className="tw-text-small tw-mt-3">
                             <p>{FORM_ID_INFO}</p>
                         </div>
                     </div>
@@ -85,7 +83,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         } else {
             return (
                 <div
-                    className="tw-grid tw-gap-4 tw-content-center tw-justify-center tw-bg-black-5 tw-text-black-40"
+                    className="tw-grid tw-gap-4 tw-content-center tw-justify-center tw-bg-surface-dim tw-text-low-contrast"
                     style={{ height: BlockHeight.Small }}
                 >
                     No Typeform form id defined.

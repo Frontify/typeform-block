@@ -59,9 +59,9 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
             <button
                 type="button"
                 onMouseDown={handler}
-                className="tw-cursor-ns-resize tw-w-full tw-pt-3 tw-h-full tw-bg-white tw-z-50"
+                className="tw-cursor-ns-resize tw-w-full tw-pt-3 tw-h-full tw-bg-surface tw-z-50"
             >
-                <div className="tw-w-8 tw-h-2 tw-bg-black-10 tw-border tw-border-line-x-strong tw-rounded-[100px] tw-mx-auto tw-ml-[50%] tw--translate-x-[50%]" />
+                <div className="tw-w-8 tw-h-2 tw-bg-line-mid tw-border tw-border-line-strong tw-rounded-[100px] tw-mx-auto tw-ml-[50%] tw--translate-x-[50%]" />
             </button>
         </div>
     );

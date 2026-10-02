@@ -13,7 +13,7 @@ type Props = {
 export const Button: FC<Props> = ({ children, buttonBackgroundColor, buttonBorderColor, buttonTextColor }) => (
     <span
         className={
-            'tw-border tw-relative tw-inline-flex tw-items-center tw-justify-center tw-cursor-pointer tw-font-body tw-font-medium tw-rounded tw-px-4 tw-h-9 tw-text-body-medium'
+            'tw-border tw-relative tw-inline-flex tw-items-center tw-justify-center tw-cursor-pointer tw-rounded tw-px-4 tw-h-9 tw-body-medium-strong'
         }
         style={{
             backgroundColor: toRgbaString(buttonBackgroundColor),
