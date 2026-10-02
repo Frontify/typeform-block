@@ -1,23 +1,20 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import { type MouseEvent as ReactMouseEvent, type ReactNode, useEffect, useState } from 'react';
+import { type MouseEvent as ReactMouseEvent, type ReactNode, useState } from 'react';
 
 import { MIN_HEIGHT_VALUE } from '../settings';
 
 type Props = {
-    saveHeight: (height: number) => void;
+    saveHeight: (height: number) => Promise<void>;
     initialHeight: string;
     children: ReactNode;
 };
 
 export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
-    const activeHeight = parseFloat(initialHeight);
-    const [height, setHeight] = useState(activeHeight);
+    // Only set while dragging; otherwise the saved height is the single source of truth
+    const [dragHeight, setDragHeight] = useState<number | null>(null);
     const [active, setActive] = useState(false);
-
-    useEffect(() => {
-        setHeight(activeHeight);
-    }, [activeHeight]);
+    const height = dragHeight ?? parseFloat(initialHeight);
 
     const handler = (mouseDownEvent: ReactMouseEvent) => {
         const startSize = height;
@@ -29,16 +26,21 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
             const newHeight = startSize - startPosition + mouseMoveEvent.pageY;
             if (newHeight > MIN_HEIGHT_VALUE) {
                 latestHeight = newHeight;
-                setHeight(newHeight);
+                setDragHeight(newHeight);
             }
         };
 
         const onMouseUp = () => {
             setActive(false);
             document.body.removeEventListener('mousemove', onMouseMove);
-            if (latestHeight !== startSize) {
-                saveHeight(latestHeight);
+            if (latestHeight === startSize) {
+                setDragHeight(null);
+                return;
             }
+            // Keep the dragged height until the save lands, so the handle doesn't snap back meanwhile
+            saveHeight(latestHeight)
+                .finally(() => setDragHeight(null))
+                .catch((error: unknown) => console.error('Failed to save the block height', error));
         };
 
         document.body.addEventListener('mousemove', onMouseMove);
@@ -47,7 +49,7 @@ export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
 
     return (
         <div className="tw-min-w-full tw-overflow-hidden">
-            <div className="tw-grid tw-justify-items-stretch" style={{ height: height ?? initialHeight }}>
+            <div className="tw-grid tw-justify-items-stretch" style={{ height }}>
                 {active && (
                     <div className="tw-fixed tw-top-0 tw-bottom-0 tw-right-0 tw-left-0 tw-select-none tw-z-40" />
                 )}

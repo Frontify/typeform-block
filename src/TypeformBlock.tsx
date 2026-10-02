@@ -21,6 +21,34 @@ export const TypeformBlock: FC<BlockProps> = (props) => (
     </div>
 );
 
+// Mounted only while no form id is saved, so the draft starts empty every time the empty state appears
+const FormIdEditor = ({ onConfirm }: { onConfirm: (formId: string) => Promise<void> }) => {
+    const [input, setInput] = useState('');
+
+    return (
+        <div className="tw-bg-surface-dim tw-p-20 tw-text-low-contrast">
+            <div className="tw-max-w-lg tw-mx-auto">
+                <div className="sm:tw-flex sm:tw-items-center">
+                    <div className="tw-w-full">
+                        <TextInput
+                            value={input}
+                            onChange={(event) => setInput(event.currentTarget.value)}
+                            placeholder="Typeform form id"
+                            aria-label="Typeform form id"
+                        />
+                    </div>
+                    <div className="tw-mt-3 sm:tw-mt-0 sm:tw-ml-3">
+                        <Button onPress={() => onConfirm(input)}>Confirm</Button>
+                    </div>
+                </div>
+                <div className="tw-text-small tw-mt-3">
+                    <p>{FORM_ID_INFO}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const TypeformBlockContent: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
@@ -43,13 +71,12 @@ const TypeformBlockContent: FC<BlockProps> = ({ appBridge }) => {
         enableSandbox: isEditing,
         position,
     };
-    const [input, setInput] = useState(blockSettings.formId);
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
 
-    const saveInputId = async () => {
+    const saveFormId = async (formId: string) => {
         setIsReadyForPrint(false);
-        await setBlockSettings({ formId: input });
+        await setBlockSettings({ formId });
         setIsReadyForPrint(true);
     };
 
@@ -57,38 +84,13 @@ const TypeformBlockContent: FC<BlockProps> = ({ appBridge }) => {
         setIsReadyForPrint(true);
     }, [setIsReadyForPrint]);
 
-    useEffect(() => {
-        setInput(settingsFormId);
-    }, [settingsFormId]);
-
     const saveHeight = async (height: number) => {
         await setBlockSettings({ heightCustom: `${height}px`, isHeightCustom: true });
     };
 
     if (!settingsFormId) {
         if (isEditing) {
-            return (
-                <div className="tw-bg-surface-dim tw-p-20 tw-text-low-contrast">
-                    <div className="tw-max-w-lg tw-mx-auto">
-                        <div className="sm:tw-flex sm:tw-items-center">
-                            <div className="tw-w-full">
-                                <TextInput
-                                    value={input}
-                                    onChange={(event) => setInput(event.currentTarget.value)}
-                                    placeholder="Typeform form id"
-                                    aria-label="Typeform form id"
-                                />
-                            </div>
-                            <div className="tw-mt-3 sm:tw-mt-0 sm:tw-ml-3">
-                                <Button onPress={() => saveInputId()}>Confirm</Button>
-                            </div>
-                        </div>
-                        <div className="tw-text-small tw-mt-3">
-                            <p>{FORM_ID_INFO}</p>
-                        </div>
-                    </div>
-                </div>
-            );
+            return <FormIdEditor onConfirm={saveFormId} />;
         } else {
             return (
                 <div
