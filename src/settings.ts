@@ -1,12 +1,6 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import {
-    type Color,
-    IconEnum,
-    appendUnit,
-    defineSettings,
-    numericalOrPixelRule,
-} from '@frontify/guideline-blocks-settings';
+import { type Color, appendUnit, defineSettings, numericalOrPixelRule } from '@frontify/guideline-blocks-settings';
 
 import { BlockHeight } from './types';
 
@@ -28,17 +22,17 @@ export const settings = defineSettings({
             choices: [
                 {
                     value: 'embed',
-                    icon: IconEnum.MarkArea,
+                    icon: 'MarkArea',
                     label: 'Embed',
                 },
                 {
                     value: 'popup',
-                    icon: IconEnum.TextBoxStack,
+                    icon: 'TextBoxStack',
                     label: 'Popup',
                 },
                 {
                     value: 'sidePanel',
-                    icon: IconEnum.SidebarRight,
+                    icon: 'SidebarRight',
                     label: 'Side panel',
                 },
             ],

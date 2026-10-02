@@ -19,7 +19,8 @@ This repository contains the source-code for the Typeform block. It's meant as a
 
 Before you can build the Typeform block, ensure you have:
 
-* Node.js version 16 (or newer) installed
+* Node.js version 24 (or newer) installed
+* [pnpm](https://pnpm.io/installation) installed (or run `corepack enable`)
 * made yourself familiar with the [Frontify CLI](https://developer.frontify.com/d/XFPCrGNrXQQM/content-blocks#/details-concepts-1/frontify-cli)
 * the [React Developer Tools](https://react.dev/learn/react-developer-tools) installed
 * a [Frontify account](https://www.frontify.com/en/signup/?plan=STARTER&interval=YEARLY) to preview the block
@@ -36,11 +37,11 @@ Get started with the Typeform block by cloning the repository, installing its de
 
 2. Install the project dependencies
 
-    `npm ci`
+    `pnpm install`
 
 3. Run the `serve` task
 
-    `npm run serve`
+    `pnpm serve`
 
 4. In your Frontify Guidelines switch to the edit mode (pencil icon in the sidebar)
 

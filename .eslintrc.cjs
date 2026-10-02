@@ -1,5 +1,6 @@
 module.exports = {
     extends: ['@frontify/eslint-config-react'],
+    ignorePatterns: ['pnpm-lock.yaml', 'pnpm-workspace.yaml'],
     settings: {
         react: {
             version: 'detect',
