@@ -10,8 +10,8 @@ type Props = {
     children: ReactNode;
 };
 
-export const Resizeable = ({ children, saveHeight, initialHeight }: Props) => {
-    const activeHeight: number = parseFloat(initialHeight.slice(0, -2));
+export const Resizable = ({ children, saveHeight, initialHeight }: Props) => {
+    const activeHeight = parseFloat(initialHeight);
     const [height, setHeight] = useState(activeHeight);
     const [active, setActive] = useState(false);
 

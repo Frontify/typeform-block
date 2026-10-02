@@ -1,6 +1,12 @@
 /* (c) Copyright Frontify Ltd., all rights reserved. */
 
-import { type Color, appendUnit, defineSettings, numericalOrPixelRule } from '@frontify/guideline-blocks-settings';
+import {
+    type Bundle,
+    type Color,
+    appendUnit,
+    defineSettings,
+    numericalOrPixelRule,
+} from '@frontify/guideline-blocks-settings';
 
 import { BlockHeight } from './types';
 
@@ -11,6 +17,11 @@ export const FORM_ID_INFO =
 const BUTTON_BACKGROUND_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
 const BUTTON_BORDER_COLOR_DEFAULT_VALUE: Color = { red: 66, green: 71, blue: 71, alpha: 1 };
 const BUTTON_TEXT_COLOR_DEFAULT_VALUE: Color = { red: 255, green: 255, blue: 255, alpha: 1 };
+
+const isButtonStyle = (bundle: Bundle) => {
+    const embedStyle = bundle.getBlock('embedStyle')?.value;
+    return embedStyle === 'popup' || embedStyle === 'sidePanel';
+};
 
 export const settings = defineSettings({
     main: [
@@ -53,9 +64,7 @@ export const settings = defineSettings({
             type: 'input',
             placeholder: 'Open form',
             defaultValue: 'Open form',
-            show: (bundle) =>
-                bundle.getBlock('embedStyle')?.value === 'popup' ||
-                bundle.getBlock('embedStyle')?.value === 'sidePanel',
+            show: isButtonStyle,
         },
     ],
     layout: [
@@ -150,9 +159,7 @@ export const settings = defineSettings({
             id: 'buttonStyle',
             type: 'multiInput',
             label: 'Button',
-            show: (bundle) =>
-                bundle.getBlock('embedStyle')?.value === 'popup' ||
-                bundle.getBlock('embedStyle')?.value === 'sidePanel',
+            show: isButtonStyle,
             layout: 'columns',
             lastItemFullWidth: false,
             blocks: [

@@ -6,10 +6,10 @@ import { FormControl } from '@frontify/fondue';
 import { Button, TextInput } from '@frontify/fondue/components';
 import { type BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
-import { type FC, useCallback, useEffect, useState } from 'react';
+import { type FC, useEffect, useState } from 'react';
 
 import { Button as TypeformButton } from './components/Button';
-import { Resizeable } from './components/Resizable';
+import { Resizable } from './components/Resizable';
 import { FORM_ID_INFO } from './settings';
 import { BlockHeight, type Options, type Settings } from './types';
 
@@ -18,7 +18,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
     const {
         formId: settingsFormId,
-        opacity,
+        opacity: isBackgroundTransparent,
         header,
         footer,
         position,
@@ -30,7 +30,6 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     } = blockSettings;
     const options: Options = {
         id: settingsFormId,
-        opacity: opacity ? 0 : 100,
         hideHeaders: !header,
         hideFooter: !footer,
         enableSandbox: isEditing,
@@ -40,14 +39,11 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     const { setIsReadyForPrint } = useReadyForPrint(appBridge);
     const activeHeight = blockSettings.isHeightCustom ? blockSettings.heightCustom : blockSettings.heightSimple;
 
-    const saveInputId = useCallback(async () => {
+    const saveInputId = async () => {
         setIsReadyForPrint(false);
-
-        await setBlockSettings({
-            ...blockSettings,
-            formId: input,
-        });
-    }, [blockSettings, input, setBlockSettings, setIsReadyForPrint]);
+        await setBlockSettings({ formId: input });
+        setIsReadyForPrint(true);
+    };
 
     useEffect(() => {
         setIsReadyForPrint(true);
@@ -58,11 +54,7 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
     }, [settingsFormId]);
 
     const saveHeight = async (height: number) => {
-        await setBlockSettings({
-            ...blockSettings,
-            heightCustom: `${height}px`,
-            isHeightCustom: true,
-        });
+        await setBlockSettings({ heightCustom: `${height}px`, isHeightCustom: true });
     };
 
     if (!settingsFormId) {
@@ -102,61 +94,47 @@ export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
         }
     }
 
-    const renderEmbed = () => {
-        switch (embedStyle) {
-            case 'embed':
-                if (isEditing) {
-                    return (
-                        <Resizeable saveHeight={saveHeight} initialHeight={activeHeight}>
-                            <Widget iframeProps={{ title: 'Typeform' }} {...options} />
-                        </Resizeable>
-                    );
-                } else {
-                    return <Widget iframeProps={{ title: 'Typeform' }} {...options} style={{ height: activeHeight }} />;
-                }
+    if (embedStyle === 'embed') {
+        const widgetProps = {
+            ...options,
+            opacity: isBackgroundTransparent ? 0 : 100,
+            iframeProps: { title: 'Typeform' },
+        };
 
-            case 'popup':
-                delete options.opacity;
+        return (
+            <div>
+                {isEditing ? (
+                    <Resizable saveHeight={saveHeight} initialHeight={activeHeight}>
+                        <Widget {...widgetProps} />
+                    </Resizable>
+                ) : (
+                    <Widget {...widgetProps} style={{ height: activeHeight }} />
+                )}
+            </div>
+        );
+    }
 
-                return (
-                    <TypeformButton
-                        buttonBackgroundColor={buttonBackgroundColor}
-                        buttonBorderColor={buttonBorderColor}
-                        buttonTextColor={buttonTextColor}
-                    >
-                        <PopupButton
-                            {...options}
-                            as="button"
-                            className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
-                        >
-                            {buttonText}
-                        </PopupButton>
-                    </TypeformButton>
-                );
+    if (embedStyle !== 'popup' && embedStyle !== 'sidePanel') {
+        return <div />;
+    }
 
-            case 'sidePanel':
-                delete options.opacity;
+    const TypeformTrigger = embedStyle === 'popup' ? PopupButton : SliderButton;
 
-                return (
-                    <TypeformButton
-                        buttonBackgroundColor={buttonBackgroundColor}
-                        buttonBorderColor={buttonBorderColor}
-                        buttonTextColor={buttonTextColor}
-                    >
-                        <SliderButton
-                            {...options}
-                            as="button"
-                            className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
-                        >
-                            {buttonText}
-                        </SliderButton>
-                    </TypeformButton>
-                );
-
-            default:
-                return null;
-        }
-    };
-
-    return <div>{renderEmbed()}</div>;
+    return (
+        <div>
+            <TypeformButton
+                buttonBackgroundColor={buttonBackgroundColor}
+                buttonBorderColor={buttonBorderColor}
+                buttonTextColor={buttonTextColor}
+            >
+                <TypeformTrigger
+                    {...options}
+                    as="button"
+                    className="tw--mx-4 tw-px-4 tw-h-9 tw-flex tw-items-center tw-justify-center"
+                >
+                    {buttonText}
+                </TypeformTrigger>
+            </TypeformButton>
+        </div>
+    );
 };

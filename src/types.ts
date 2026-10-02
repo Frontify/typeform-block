@@ -17,7 +17,8 @@ export type Settings = {
     buttonText: string;
     header: boolean;
     footer: boolean;
-    opacity?: number;
+    /** "Transparent background" switch; the id stays `opacity` so saved blocks keep their value. */
+    opacity?: boolean;
     position: 'left' | 'right';
     buttonBackgroundColor: Color;
     buttonBorderColor: Color;
@@ -26,7 +27,6 @@ export type Settings = {
 
 export type Options = {
     id: string;
-    opacity?: number;
     hideHeaders: boolean;
     hideFooter: boolean;
     enableSandbox: boolean;
