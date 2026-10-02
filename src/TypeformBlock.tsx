@@ -7,12 +7,21 @@ import { type BlockProps } from '@frontify/guideline-blocks-settings';
 import { PopupButton, SliderButton, Widget } from '@typeform/embed-react';
 import { type FC, useEffect, useState } from 'react';
 
+import blockScope from '../block-scope.json';
+
 import { Button as TypeformButton } from './components/Button';
 import { Resizable } from './components/Resizable';
 import { FORM_ID_INFO } from './settings';
 import { BlockHeight, type Options, type Settings } from './types';
 
-export const TypeformBlock: FC<BlockProps> = ({ appBridge }) => {
+// The scope class must wrap every render path: postcss/scope.cjs prefixes all Tailwind rules with it.
+export const TypeformBlock: FC<BlockProps> = (props) => (
+    <div className={blockScope.scope}>
+        <TypeformBlockContent {...props} />
+    </div>
+);
+
+const TypeformBlockContent: FC<BlockProps> = ({ appBridge }) => {
     const isEditing = useEditorState(appBridge);
     const [blockSettings, setBlockSettings] = useBlockSettings<Settings>(appBridge);
     const {
