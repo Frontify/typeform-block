@@ -177,7 +177,7 @@ importers:
         version: 3.0.7(@babel/core@7.29.7(supports-color@7.2.0))(@babel/preset-env@7.29.7(@babel/core@7.29.7(supports-color@7.2.0))(supports-color@7.2.0))(@babel/template@7.29.7)(@frontify/app-bridge@3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2))(@types/node@24.19.1)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.126.0(slate@0.102.0))(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.127.0(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.113.1(slate@0.102.0))(slate-hyperscript@0.127.0(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
       '@typeform/embed-react':
         specifier: ^5.0.0
-        version: 5.0.0(react@18.3.1)
+        version: 5.4.0(react@18.3.1)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -2273,14 +2273,14 @@ packages:
   '@tybys/wasm-util@0.10.4':
     resolution: {integrity: sha512-W3c4gRigFS0T/Ma4qIYF3GDAc5AQdHb1yL5znJT1Zv1YaD9Kitx656wBjvr19qbiosmZT8lWDM5BEMynUqX65A==}
 
-  '@typeform/embed-react@5.0.0':
-    resolution: {integrity: sha512-HlBxVJBEtf15Mjp6bYnoO91z2SnOLkqkJCflKsuUEqJSauf1RDSTl0X00AJqOsb+SQ8C7kWkGHceXrlEUii4mg==}
+  '@typeform/embed-react@5.4.0':
+    resolution: {integrity: sha512-CtzZw1Uq8O518GMAMpXiUCjxFhHagOkZcwsBuMoWdaepG9bfxVOmzJbDlYXvN8llJSpCxrwXVZXZKGHbwsdbow==}
     engines: {node: '>=18'}
     peerDependencies:
       react: '>=16.8.0'
 
-  '@typeform/embed@6.0.0':
-    resolution: {integrity: sha512-ShV9P8/I9Cp24vJEDyb1huWAbPE4T6d7sE6jux03YPH67RzOE5cUrEuZ4vq0rpiGbWvpmhRLSZKspBC8SstN4Q==}
+  '@typeform/embed@6.1.0':
+    resolution: {integrity: sha512-QPuic/WCE7VZBlIfuQb4oewFYRPbLMkUPKoftquNFBOxrMpf8W0b5edZyTD5prHO1+5ShoS2pY1ZsAI6yZjxUA==}
     engines: {node: '>=18'}
 
   '@types/d3-array@3.0.3':
@@ -8227,13 +8227,13 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@typeform/embed-react@5.0.0(react@18.3.1)':
+  '@typeform/embed-react@5.4.0(react@18.3.1)':
     dependencies:
-      '@typeform/embed': 6.0.0
+      '@typeform/embed': 6.1.0
       fast-deep-equal: 3.1.3
       react: 18.3.1
 
-  '@typeform/embed@6.0.0': {}
+  '@typeform/embed@6.1.0': {}
 
   '@types/d3-array@3.0.3': {}
 
@@ -12035,7 +12035,7 @@ snapshots:
 
   zustand-x@3.0.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1)):
     dependencies:
-      immer: 10.1.1
+      immer: 10.2.0
       lodash.mapvalues: 4.6.0
       react-tracked: 1.7.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)
       zustand: 4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1)
