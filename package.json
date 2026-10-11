@@ -1,7 +1,7 @@
 {
     "name": "typeform_block",
     "version": "1.0.0",
-    "packageManager": "pnpm@12.10.1",
+    "packageManager": "pnpm@12.11.2",
     "main": "src/index.ts",
     "scripts": {
         "serve": "frontify-cli serve --entryPath src/index.ts",
