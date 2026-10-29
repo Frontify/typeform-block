@@ -174,7 +174,7 @@ importers:
         version: 13.10.0(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
       '@frontify/guideline-blocks-settings':
         specifier: ^3.0.6
-        version: 3.0.9(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@frontify/app-bridge@3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2))(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
+        version: 3.0.11(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@frontify/app-bridge@3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2))(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
       '@typeform/embed-react':
         specifier: ^5.0.0
         version: 5.5.0(react@18.3.1)
@@ -874,6 +874,14 @@ packages:
       react: ^18
       react-dom: ^18
 
+  '@frontify/fondue-charts@9.0.0':
+    resolution: {integrity: sha512-oEld+zSYc6m5butZGSHGPuUrvFkHHMvsd5BfU1bD0KeTLgcg8JoAmJ4cqp+AwIZHOJfkozzhcERIqiORyma/7w==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@frontify/fondue-tokens': ^5.2.0
+      react: ^18
+      react-dom: ^18
+
   '@frontify/fondue-components@34.0.0':
     resolution: {integrity: sha512-CjeMpt+d1B+Kai4gusLuzo8WggBxgbHxAwOXLJuEGT5HUW4Voxnbw/embsFQfoKVD9HG593iAr0h9ESRXTbV1g==}
     engines: {node: '>=18'}
@@ -883,8 +891,23 @@ packages:
       react: ^18
       react-dom: ^18
 
+  '@frontify/fondue-components@35.0.0':
+    resolution: {integrity: sha512-ta0yuLlHGcygF+xk0f/4IqL7M2wQyP+GvWwvmZ4aQQMeFAveDV94yPoGUDmjs2a1Egy8sG7jE4vkG6c1dCvXsA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@frontify/fondue-icons': ^0.31.0
+      '@frontify/fondue-tokens': ^5.2.0
+      react: ^18
+      react-dom: ^18
+
   '@frontify/fondue-icons@0.30.0':
     resolution: {integrity: sha512-JTVu+bVW0q2axokZBHKUEzhspW8TtVk3/xw2gQhOXQ9ew3BO0DmZGy/c9/paAMaRtRHbBldKCWb5GabZJYma/A==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      react: ^18
+
+  '@frontify/fondue-icons@0.31.0':
+    resolution: {integrity: sha512-fIDIcVkqfOVRU1mzu7Eppl3r1mQ2VwccPMFgvm1Ed8bm7RDxLAzcci0WgbOUGYYZMkCIeUYbpiVFflBMzJeRBQ==}
     engines: {node: '>=18'}
     peerDependencies:
       react: ^18
@@ -896,12 +919,28 @@ packages:
       react: ^18
       react-dom: ^18
 
+  '@frontify/fondue-rte@0.1.13':
+    resolution: {integrity: sha512-OeyigOm+leQbJYS5FsBf9+DFQWKIWeVLNE8kxYvYYM0ddnA8974XDCzTNfMVdHOghyaJQ+JvFOqDw2Vo46NkxQ==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      react: ^18
+      react-dom: ^18
+
   '@frontify/fondue-sdk@0.2.4':
     resolution: {integrity: sha512-uwNAimZdZBx0Dgjt/Abfm1xQAKDRxseBfUS2PwZUKqwZIrEoxdFHKZ8VPo38kBywkNTgUC4ECWuWctW1FtkE7w==}
     engines: {node: '>=20'}
 
+  '@frontify/fondue-sdk@0.3.0':
+    resolution: {integrity: sha512-YdanObge/dpgp7X2yk7toT5EpO9c2ek+7vE4xnu9xKocpXYs/13WVEnRtIucayhPGvbL4zQF/wmBgPsP5yfidA==}
+    engines: {node: '>=20'}
+
   '@frontify/fondue-tokens@5.1.2':
     resolution: {integrity: sha512-fKif/+w9f37ZtrHXwIjPkngLrQcN8tHEtylPdwjNcDhiR3XsNNDKDiPqZSqtd4vznJH6+xRcGpNTPAYOteaWCw==}
+    peerDependencies:
+      tailwindcss: ^3.4.17
+
+  '@frontify/fondue-tokens@5.2.0':
+    resolution: {integrity: sha512-HElBLFjsMPcG1yx1txSsXnF9pRphlcp9Z6wpyZSL8iBy5dzvfOG9432yONLi3m1Gpqb7CzASMcWMza4iB7cJhw==}
     peerDependencies:
       tailwindcss: ^3.4.17
 
@@ -913,13 +952,21 @@ packages:
       react: ^18
       react-dom: ^18
 
+  '@frontify/fondue@13.11.0':
+    resolution: {integrity: sha512-pfQoFG2FqatmaFPghXo9TH6+YPJvU8vwcUKOp7eQXU9BUiuI50hAX68GcGAwvh1m5Op28yQpuL9g1vyBAEbccQ==}
+    engines: {node: '>=18'}
+    hasBin: true
+    peerDependencies:
+      react: ^18
+      react-dom: ^18
+
   '@frontify/frontify-cli@6.4.2':
     resolution: {integrity: sha512-4fPNLhSZtwe+k0hQB69amalGHjUkXzNDnLwcfOiKsqX6zGPRIEbmw/DRpFo6NcmT7lkFoePLvyenbgAcL/TPTQ==}
     engines: {node: '>=22'}
     hasBin: true
 
-  '@frontify/guideline-blocks-settings@3.0.9':
-    resolution: {integrity: sha512-0eoKKp9gCHET+HGk/h9WDF11NnPRsPnseDIxL3AZ8oJ0YcW21mbNfs6f5Wg3dMQMk+CH0sXklQsBhyWu8VQlxA==}
+  '@frontify/guideline-blocks-settings@3.0.11':
+    resolution: {integrity: sha512-Wwg771zK16W3vc++7GyLCi9f7WUe6C9b3WnYbt/wl7j5SoTONPYjWc3MdQ+DBgHpc52PASI/b92TcfVwDy5sAw==}
     peerDependencies:
       '@frontify/app-bridge': ^3.0.0 || >=4.0.0-alpha.0 < 4.0.0-alpha.68
       react: ^18
@@ -6006,6 +6053,28 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
+  '@frontify/fondue-charts@9.0.0(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
+      '@react-spring/web': 10.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@visx/axis': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/glyph': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/grid': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/group': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/hierarchy': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/responsive': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/scale': 4.0.0
+      '@visx/shape': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/text': 4.0.0(@types/react@18.3.31)(react@18.3.1)
+      '@visx/tooltip': 4.0.0(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@visx/xychart': 4.0.0(@react-spring/web@10.1.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lodash-es: 4.18.1
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+
   '@frontify/fondue-components@34.0.0(@frontify/fondue-icons@0.30.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.1.2(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@dnd-kit/abstract': 0.3.2
@@ -6041,9 +6110,51 @@ snapshots:
       - '@types/react'
       - '@types/react-dom'
 
+  '@frontify/fondue-components@35.0.0(@frontify/fondue-icons@0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@dnd-kit/abstract': 0.3.2
+      '@dnd-kit/react': 0.3.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-icons': 0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
+      '@headless-tree/core': 1.8.0
+      '@headless-tree/react': 1.8.0(@headless-tree/core@1.8.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-accordion': 1.3.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-checkbox': 1.4.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dialog': 1.3.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-dropdown-menu': 2.2.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-label': 2.1.17(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-popover': 1.3.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-progress': 1.2.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-radio-group': 1.5.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-scroll-area': 1.4.0(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-select': 2.4.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-separator': 1.2.0(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-slider': 1.6.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-slot': 1.5.0(@types/react@18.3.31)(react@18.3.1)
+      '@radix-ui/react-switch': 1.4.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-tabs': 1.2.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-toggle-group': 1.2.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-tooltip': 1.4.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      date-fns: 3.6.0
+      downshift: 9.4.0(react@18.3.1)
+      react: 18.3.1
+      react-colorful: 5.8.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-day-picker: 9.14.0(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+
   '@frontify/fondue-icons@0.30.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))':
     dependencies:
       '@frontify/fondue-tokens': 5.1.2(tailwindcss@3.4.19(yaml@2.9.1))
+      react: 18.3.1
+    transitivePeerDependencies:
+      - tailwindcss
+
+  '@frontify/fondue-icons@0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))':
+    dependencies:
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
       react: 18.3.1
     transitivePeerDependencies:
       - tailwindcss
@@ -6143,6 +6254,101 @@ snapshots:
       - tailwindcss
       - zustand
 
+  '@frontify/fondue-rte@0.1.13(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))':
+    dependencies:
+      '@ctrl/tinycolor': 4.2.1
+      '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
+      '@frontify/fondue-charts': 9.0.0(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-components': 35.0.0(@frontify/fondue-icons@0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-icons': 0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
+      '@popperjs/core': 2.11.8
+      '@radix-ui/react-popover': 1.3.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-toolbar': 1.2.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@radix-ui/react-tooltip': 1.4.1(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/aria-modal-polyfill': 3.8.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/button': 3.15.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/checkbox': 3.17.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/dialog': 3.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/focus': 3.22.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/interactions': 3.28.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/link': 3.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/listbox': 3.16.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/menu': 3.22.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/overlays': 3.32.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/radio': 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/select': 3.18.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/utils': 3.34.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/visually-hidden': 3.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/collections': 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/list': 3.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/overlays': 3.7.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/radio': 3.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/select': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/toggle': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/tree': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-types/shared': 3.37.0(react@18.3.1)
+      '@udecode/plate-alignment': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-autoformat': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-basic-marks': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-break': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-code-block': 31.3.4(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-combobox': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-core': 36.5.9(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-emoji': 31.4.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-floating': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-font': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-indent': 31.1.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-link': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-list': 31.1.3(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-mention': 31.3.5(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-normalizers': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-paragraph': 31.0.0(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/plate-utils': 36.5.9(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/react-utils': 31.0.0(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@udecode/slate': 31.0.0(slate-history@0.144.0(slate@0.102.0))(slate@0.102.0)
+      '@udecode/slate-react': 31.0.0(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate-history@0.144.0(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0)
+      '@udecode/slate-utils': 31.3.2(slate-history@0.144.0(slate@0.102.0))(slate@0.102.0)
+      '@udecode/utils': 31.0.0
+      '@udecode/zustood': 2.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
+      escape-html: 1.0.3
+      immer: 10.1.1
+      lodash-es: 4.18.1
+      motion: 12.43.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-colorful: 5.8.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-dnd: 16.0.1(@types/node@24.19.2)(@types/react@18.3.31)(react@18.3.1)
+      react-dnd-html5-backend: 16.0.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-fast-compare: 3.2.2
+      react-is: 18.3.1
+      react-popper: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      remark-gfm: 3.0.1(supports-color@7.2.0)
+      remark-parse: 10.0.2(supports-color@7.2.0)
+      slate: 0.102.0
+      slate-react: 0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0)
+      unified: 10.1.2
+      unist-util-visit: 5.2.0
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/template'
+      - '@emotion/is-prop-valid'
+      - '@types/hoist-non-react-statics'
+      - '@types/node'
+      - '@types/react'
+      - '@types/react-dom'
+      - '@udecode/plate-common'
+      - react-native
+      - scheduler
+      - slate-history
+      - slate-hyperscript
+      - supports-color
+      - tailwindcss
+      - zustand
+
   '@frontify/fondue-sdk@0.2.4(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))':
     dependencies:
       '@frontify/fondue-components': 34.0.0(@frontify/fondue-icons@0.30.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.1.2(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6155,7 +6361,23 @@ snapshots:
       - react-dom
       - tailwindcss
 
+  '@frontify/fondue-sdk@0.3.0(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))':
+    dependencies:
+      '@frontify/fondue-components': 35.0.0(@frontify/fondue-icons@0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-icons': 0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - react
+      - react-dom
+      - tailwindcss
+
   '@frontify/fondue-tokens@5.1.2(tailwindcss@3.4.19(yaml@2.9.1))':
+    dependencies:
+      tailwindcss: 3.4.19(yaml@2.9.1)
+
+  '@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1))':
     dependencies:
       tailwindcss: 3.4.19(yaml@2.9.1)
 
@@ -6173,6 +6395,78 @@ snapshots:
       '@frontify/fondue-rte': 0.1.12(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
       '@frontify/fondue-sdk': 0.2.4(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
       '@frontify/fondue-tokens': 5.1.2(tailwindcss@3.4.19(yaml@2.9.1))
+      '@popperjs/core': 2.11.8
+      '@react-aria/accordion': 3.0.0-alpha.37(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/breadcrumbs': 3.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/button': 3.15.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/checkbox': 3.17.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/focus': 3.22.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/interactions': 3.28.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/link': 3.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/listbox': 3.16.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/menu': 3.22.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/overlays': 3.32.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/radio': 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/select': 3.18.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/utils': 3.34.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-aria/visually-hidden': 3.9.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/checkbox': 3.8.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/collections': 3.13.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/list': 3.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/menu': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/radio': 3.12.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/select': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/table': 3.16.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/toggle': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-stately/tree': 3.10.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@react-types/shared': 3.37.0(react@18.3.1)
+      '@tailwindcss/forms': 0.5.11(tailwindcss@3.4.19(yaml@2.9.1))
+      commander: 14.0.3
+      date-fns: 3.6.0
+      execa: 9.6.1
+      immer: 10.1.1
+      jscodeshift: 0.16.1(supports-color@7.2.0)
+      lodash-es: 4.18.1
+      motion: 12.43.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-datepicker: 6.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-dom: 18.3.1(react@18.3.1)
+      react-fast-compare: 3.2.2
+      react-is: 18.3.1
+      react-popper: 2.3.0(@popperjs/core@2.11.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-textarea-autosize: 8.5.9(@types/react@18.3.31)(react@18.3.1)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@babel/preset-env'
+      - '@babel/template'
+      - '@emotion/is-prop-valid'
+      - '@types/hoist-non-react-statics'
+      - '@types/node'
+      - '@types/react'
+      - '@types/react-dom'
+      - '@udecode/plate-common'
+      - react-native
+      - scheduler
+      - slate-history
+      - slate-hyperscript
+      - supports-color
+      - tailwindcss
+      - zustand
+
+  '@frontify/fondue@13.11.0(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))':
+    dependencies:
+      '@ctrl/tinycolor': 4.2.1
+      '@dnd-kit/core': 6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/modifiers': 7.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/sortable': 8.0.0(@dnd-kit/core@6.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
+      '@floating-ui/dom': 1.8.0
+      '@frontify/fondue-charts': 9.0.0(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-components': 35.0.0(@frontify/fondue-icons@0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1)))(@frontify/fondue-tokens@5.2.0(tailwindcss@3.4.19(yaml@2.9.1)))(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@frontify/fondue-icons': 0.31.0(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
+      '@frontify/fondue-rte': 0.1.13(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
+      '@frontify/fondue-sdk': 0.3.0(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(tailwindcss@3.4.19(yaml@2.9.1))
+      '@frontify/fondue-tokens': 5.2.0(tailwindcss@3.4.19(yaml@2.9.1))
       '@popperjs/core': 2.11.8
       '@react-aria/accordion': 3.0.0-alpha.37(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@react-aria/breadcrumbs': 3.6.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -6263,14 +6557,14 @@ snapshots:
       - tsx
       - yaml
 
-  '@frontify/guideline-blocks-settings@3.0.9(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@frontify/app-bridge@3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2))(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))':
+  '@frontify/guideline-blocks-settings@3.0.11(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@frontify/app-bridge@3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2))(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))':
     dependencies:
       '@ctrl/tinycolor': 4.2.1
       '@dnd-kit/core': 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@dnd-kit/sortable': 10.0.0(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
       '@frontify/app-bridge': 3.12.10(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sinon@21.1.2)
-      '@frontify/fondue': 13.10.0(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
+      '@frontify/fondue': 13.11.0(@babel/core@7.29.7(supports-color@7.2.0))(@babel/template@7.29.7)(@types/node@24.19.2)(@types/react-dom@18.3.7(@types/react@18.3.31))(@types/react@18.3.31)(@udecode/plate-common@41.0.13(@types/react@18.3.31)(immer@10.1.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-dom@0.147.3(slate@0.102.0))(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(slate-react@0.102.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(slate@0.102.0))(slate@0.102.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(scheduler@0.23.2)(slate-history@0.144.0(slate@0.102.0))(slate-hyperscript@0.138.3(slate@0.102.0))(supports-color@7.2.0)(tailwindcss@3.4.19(yaml@2.9.1))(zustand@4.5.7(@types/react@18.3.31)(immer@10.1.1)(react@18.3.1))
       '@frontify/sidebar-settings': 0.12.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@tailwindcss/container-queries': 0.1.1(tailwindcss@3.4.19(yaml@2.9.1))
       react: 18.3.1
