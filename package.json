@@ -24,7 +24,7 @@
     "devDependencies": {
         "@frontify/eslint-config-react": "^1.0.16",
         "@frontify/frontify-cli": "^6.2.7",
-        "@types/node": "^24.19.0",
+        "@types/node": "^26.0.0",
         "@types/react": "^18.3.12",
         "@types/react-dom": "^18.2.24",
         "autoprefixer": "^10.6.1",
