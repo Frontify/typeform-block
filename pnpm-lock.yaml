@@ -212,7 +212,7 @@ importers:
         version: 1.0.16(@typescript-eslint/utils@8.73.0(eslint@10.15.0(jiti@1.21.7)(supports-color@7.2.0))(supports-color@7.2.0)(typescript@5.9.3))(eslint@10.15.0(jiti@1.21.7)(supports-color@7.2.0))(prettier@3.10.1)(react@18.3.1)(supports-color@7.2.0)(typescript@5.9.3)
       '@frontify/frontify-cli':
         specifier: ^6.2.7
-        version: 6.4.3(@types/node@24.19.2)(jiti@1.21.7)(yaml@2.9.1)
+        version: 6.4.4(@types/node@24.19.2)(jiti@1.21.7)(yaml@2.9.1)
       '@types/node':
         specifier: ^24.19.0
         version: 24.19.2
@@ -932,8 +932,8 @@ packages:
       react: ^18
       react-dom: ^18
 
-  '@frontify/frontify-cli@6.4.3':
-    resolution: {integrity: sha512-2XUjJeC9qgpcmpMrpkdosTzZtlLEn+6I+WjO+WIpM8ADZEX7yIjxtfTnATypTL+/Np0thRZc9FYr5ut4J6lHpg==}
+  '@frontify/frontify-cli@6.4.4':
+    resolution: {integrity: sha512-Z2cDy7g3soPcA6vFlk1qYtBoJP7D5g5PGNTiJeUNDiDcMaT0Td8erIqwPnRT/DD0DEXbTSTjtSetzAASn0r08A==}
     engines: {node: '>=22'}
     hasBin: true
 
@@ -6270,7 +6270,7 @@ snapshots:
       - tailwindcss
       - zustand
 
-  '@frontify/frontify-cli@6.4.3(@types/node@24.19.2)(jiti@1.21.7)(yaml@2.9.1)':
+  '@frontify/frontify-cli@6.4.4(@types/node@24.19.2)(jiti@1.21.7)(yaml@2.9.1)':
     dependencies:
       '@fastify/cors': 11.4.3
       '@vitejs/plugin-react': 6.3.0(vite@8.3.8(@types/node@24.19.2)(esbuild@0.28.2)(jiti@1.21.7)(yaml@2.9.1))
